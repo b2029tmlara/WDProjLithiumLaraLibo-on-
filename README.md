@@ -47,3 +47,12 @@ PHILIPPINE SCIENCE HS - MC
 
 # JavaScript Usage
 JavaScript will be used primarily to add the element of interactivity in the Interactive Piano part, with functions to be called and return specific values in order for notes to be properly played by the user upon the click of keys on their keyboard (edited)Tuesday, October 28, 2025 9:52 PM
+
+
+
+
+# Wireframe:
+
+## Home Page: 
+
+
