@@ -1,6 +1,6 @@
 # WDProjLithiumLaraLibo-on Project Proposal
 
-##
+## 88 Keys 
 
 Project Repository for SY2526 CS 3 Project 
 
