@@ -42,5 +42,8 @@ PHILIPPINE SCIENCE HS - MC
     1. An audio file for each chord that when played will let the user hear what each chord sounds like.
 ### **V. Interactive Piano**
   * A. JS Piano\
-    1. An interactive piano that users can play by using either their mouse or the keyboard.\
+    1. An interactive piano that users can play by using either their mouse or the keyboard.
 
+
+# JavaScript Usage
+JavaScript will be used primarily to add the element of interactivity in the Interactive Piano part, with functions to be called and return specific values in order for notes to be properly played by the user upon the click of keys on their keyboard (edited)Tuesday, October 28, 2025 9:52 PM
