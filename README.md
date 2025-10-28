@@ -18,29 +18,29 @@ PHILIPPINE SCIENCE HS - MC
 
 # Outlines
 
-I. Homepage
-  A. The Description of the Website
-    1. The paragraph above is what we are going to put for this
-  B. Boxes for the other pages
-    1. This will show the description for the other webpages and the navigation to these said webpages
-  C. Footer
-    1. This will contain the references and copyright
-II. History of the Piano
-  A. Timeline
-    1. Details about how the piano was made and the diffirent people who contributed to the creation of the piano.
-  B. Images
-    2. Along with the written details, we will show images of the people who contributed and the different advances of the piano from the first piano ever made to the current capabilities of the piano.
-III. Mechanisms of the Piano
-  A. Parts of the Piano
-    1. An informative page about the different parts of the piano and how each works
-  B. Images
-    1. Images that will help the reader visualize the different parts.
-IV. Important Chords 
-  A. The Different Chords
-    1. A cheat sheet on the important chords that piano players should know
-  B. Audio Files
-    2. An audio file for each chord that when played will let the user hear what each chord sounds like.
-V. Interactive Piano
-  A. JS Piano
-    1. An interactive piano that users can play by using either their mouse or the keyboard.
+I. Homepage \
+  A. The Description of the Website\
+    1. The paragraph above is what we are going to put for this\
+  B. Boxes for the other pages\
+    1. This will show the description for the other webpages and the navigation to these said webpages\
+  C. Footer\
+    1. This will contain the references and copyright\
+II. History of the Piano\
+  A. Timeline\
+    1. Details about how the piano was made and the diffirent people who contributed to the creation of the piano.\
+  B. Images\
+    2. Along with the written details, we will show images of the people who contributed and the different advances of the piano from the first piano ever made to the current capabilities of the piano.\
+III. Mechanisms of the Piano\
+  A. Parts of the Piano\
+    1. An informative page about the different parts of the piano and how each works\
+  B. Images\
+    1. Images that will help the reader visualize the different parts.\
+IV. Important Chords \
+  A. The Different Chords\
+    1. A cheat sheet on the important chords that piano players should know\
+  B. Audio Files\
+    2. An audio file for each chord that when played will let the user hear what each chord sounds like.\
+V. Interactive Piano\
+  A. JS Piano\
+    1. An interactive piano that users can play by using either their mouse or the keyboard.\
 
