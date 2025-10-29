@@ -14,6 +14,7 @@ LIBO-ON, Nathan Allen L.
 9 LITHIUM BATCH 2029
 
 PHILIPPINE SCIENCE HS - MC 
+![Homepage](./assests/pianologo.jpg "Mountain View")
 
 # Description
 
@@ -52,10 +53,39 @@ PHILIPPINE SCIENCE HS - MC
 JavaScript will be used primarily to add the element of interactivity in the Interactive Piano part, with functions to be called and return specific values in order for notes to be properly played by the user upon the click of keys on their keyboard (edited)Tuesday, October 28, 2025 9:52 PM
 
 
-
-
 # Wireframe:
 
 ## Home Page: 
+![Homepage](./assests/homepage.jpg "Mountain View")
 
+## Page 1
 
+![Homepage](./assests/page1.jpg "Mountain View")
+
+## Page 1 Expanded
+
+![Homepage](./assests/page1expanded.jpg "Mountain View")
+
+## Page 2
+
+![Homepage](./assests/page2.jpg "Mountain View")
+
+## Page 2 Expanded
+
+![Homepage](./assests/page2expanded.jpg "Mountain View")
+
+## Page 3
+
+![page2expnaded](./assests/page3.jpg "Mountain View")
+
+## Page 3 Expanded
+
+![page2expnaded](./assests/page3expanded.jpg "Mountain View")
+
+## Page 4
+
+![page2expnaded](./assests/page4.jpg "Mountain View")
+
+## Page 4 Expanded
+
+![page2expnaded](./assests/page4expanded.jpg "Mountain View")
