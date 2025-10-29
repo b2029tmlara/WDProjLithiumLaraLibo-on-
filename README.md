@@ -1,6 +1,6 @@
 # WDProjLithiumLaraLibo-on Project Proposal
-**you can remove this: the topic is great and also the inclusion of the virtual piano** 
-**please check your spellings and extra characters that are not needed in this proposal**
+**you can remove this after reading: the topic is great and also the inclusion of the virtual piano,** 
+**please check your spellings and extra characters that are not needed in this proposal.**
 **I will wait for the pages' wireframes good luck --ALMendoza**
 
 ## 88 Keys 
