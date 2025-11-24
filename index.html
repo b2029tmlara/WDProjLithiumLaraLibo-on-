@@ -45,14 +45,36 @@
             text-align: center;
             margin: 0 auto;
         }
+ header {
+        background-color: #f4f4f4;
+        padding: 10px;
+        display: flex;              /* Use flexbox for easy alignment */
+        justify-content: space-between; /* Space between text and image */
+        align-items: center;        /* Vertically center items */
+    }
 
+    /* Style the image */
+    header img {
+        width: 120px;   /* Change width */
+        height: auto;   /* Keep aspect ratio */
+        object-fit: contain; /* Prevent distortion */
+    }
+
+    /* Optional: move image further right with margin */
+    .right-image {
+        margin-left: auto; /* Push image to the far right */
+    }
 </style>
   </head>
  
 <body> 
   <div class="center">
-    <h1> Lara & Libo-on SY2526 PROJECT STRUCTURE </h1>
-   
+    <header> 
+    <h1> 88 Keys </h1>
+    <img src="HEADER.img"  alt="Logo" class="right-image"> 
+    
+   </header>
+    
 <section class="explanSection"> 
 <h3> Explanations </h3>
 </section>
