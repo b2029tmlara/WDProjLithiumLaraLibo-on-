@@ -1,1 +1,193 @@
+/* LINES 3-193: STYLES FOR INDEX HTML PAGE */
 
+body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    display: flex; /* Centers the whole container on the page */
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    /* Create a 2x2 grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-rows: auto auto; /* Two rows */
+    gap: 20px; /* Space between the four units */
+    max-width: 800px; /* Optional: Sets max width for the whole layout */
+    width: 100%;
+}
+
+.firstPage {
+    /* Use Flexbox to align the black and empty boxes horizontally */
+    display: flex;
+    align-items: center;
+    height: 150px; /* Defines the height of the row/unit */
+    background-color: rgb(241, 235, 235);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 25px; 
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(197,197,197);
+}
+
+.secondPage {
+    /* Use Flexbox to align the black and empty boxes horizontally */
+    display: flex;
+    align-items: center;
+    height: 150px; /* Defines the height of the row/unit */
+    background-color: rgb(241, 235, 235);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 25px; 
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(197,197,197);
+}
+
+.thirdPage {
+    /* Use Flexbox to align the black and empty boxes horizontally */
+    display: flex;
+    align-items: center;
+    height: 150px; /* Defines the height of the row/unit */
+    background-color: rgb(241, 235, 235);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 25px; 
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(197,197,197);
+}
+
+.fourthPage {
+    /* Use Flexbox to align the black and empty boxes horizontally */
+    display: flex;
+    align-items: center;
+    height: 150px; /* Defines the height of the row/unit */
+    background-color: rgb(241, 235, 235);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 25px; 
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(197,197,197);
+    
+    
+}
+.content-box {
+    /* Base styling for all boxes */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Styling for the Black Blocks */
+.black-box {
+    background-color: black;
+    color: white;
+    width: 30%; /* Set the width for the descriptive black block */
+    text-align: left;
+    padding: 15px 10px;
+}
+
+.page-number {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 14px;
+}
+
+/* Styling for the Empty Blocks */
+.empty-box {
+    /* Creates the white box with the crossed lines */
+    background-color: white;
+    border: 1px solid black;
+    width: 70%; /* Fills the remaining space */
+    position: relative;
+}
+
+.empty-box::before,
+.empty-box::after {
+    /* Create the 'X' */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: black;
+    transform-origin: center;
+}
+
+.empty-box::before {
+    /* Line 1 (/) */
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.empty-box::after {
+    /* Line 2 (\) */
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+/* Specific alignment for Page 3 and Page 4 */
+.page-unit:nth-child(2),
+.page-unit:nth-child(4) {
+    /* Reverse the order of boxes for the right column (Page 3 & 4) */
+    flex-direction: row-reverse;
+}
+
+.right-align {
+    /* Adjust text alignment for black boxes on the right side */
+    align-items: flex-end;
+    text-align: right;
+} 
+
+/* Style Section for Website Explanation (Travs) */
+.explanSection { 
+    background-color: rgb(241, 235, 235);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 25px; 
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(197,197,197);
+    text-align: center;
+} 
+
+/* Style Section for Other Webpage Hyperlinks (Travs) */
+.indexLinks {
+    background-color: rgb(241, 235, 235);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 25px; 
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(197,197,197);
+    text-align: center;
+}
+
+.center {
+           align-items: center;
+            text-align: center;
+            margin: 0 auto;
+        }
+ header {
+        background-color: #f4f4f4;
+        padding: 10px;
+        display: flex;              /* Use flexbox for easy alignment */
+        justify-content: space-between; /* Space between text and image */
+        align-items: center;        /* Vertically center items */
+    }
+
+    /* Style the image */
+    header img {
+        width: 120px;   /* Change width */
+        height: auto;   /* Keep aspect ratio */
+        object-fit: contain; /* Prevent distortion */
+    }
+
+    /* Optional: move image further right with margin */
+    .right-image {
+        margin-left: auto; /* Push image to the far right */
+    }
