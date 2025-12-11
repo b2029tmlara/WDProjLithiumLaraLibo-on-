@@ -1,0 +1,84 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../assets/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: auto;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    padding: 10px;
+    background-attachment: fixed;
+}
+
+
+.explanSection { 
+    border-radius: 10px;
+    padding: 25px; 
+    box-shadow: 0 0 10px rgba(197,197,197);
+    text-align: center;
+    align-items: center;
+    width: auto;
+    background-color: rgba(202, 116, 59, 0.8);
+    border: 4px solid black;
+    height: 150px;
+    margin: 10vh;
+} 
+
+
+.center {
+           align-items: center;
+            text-align: center;
+            margin: 0 auto;
+        }
+     
+header {
+    background-color: rgba(190, 126, 30, 0.849); 
+    border: 4px solid black;
+    width: auto;
+    height: 110px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: flex;              /* Use flexbox for easy alignment */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center;        /* Vertically center items */
+}  
+
+
+    /* Style the image */
+header img {
+    width: 120px;   /* Change width */
+    height: auto;   /* Keep aspect ratio */
+    object-fit: contain; /* Prevent distortion */
+}
+
+/* Optional: move image further right with margin */
+.right-image {
+    margin-left: auto; /* Push image to the far right */
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(241, 212, 48);
+}
+
+footer {
+    background-color: rgba(190, 126, 30, 0.849); 
+    border: 4px solid black;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
