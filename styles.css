@@ -1,21 +1,15 @@
-/* LINES 3-193: STYLES FOR INDEX HTML PAGE */
 
 body {
-    font-family: Arial, sans-serif;
+    background-image: url("../assets/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    width: auto;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
     justify-content: center;
-    display: flex; /* Centers the whole container on the page */
-    padding: 20px;
-    margin: 0;
-}
-
-.container {
-    /* Create a 2x2 grid */
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    grid-template-rows: auto auto; /* Two rows */
-    gap: 20px; /* Space between the four units */
-    max-width: 800px; /* Optional: Sets max width for the whole layout */
-    width: 100%;
+    background-attachment: fixed;
 }
 
 .firstPage {
@@ -23,7 +17,9 @@ body {
     display: flex;
     align-items: center;
     height: 150px; /* Defines the height of the row/unit */
-    background-color: rgb(241, 235, 235);
+    width: 100%;
+    clear: both; 
+    background-color: rgb(153, 76, 24);
     border: 1px solid black;
     border-radius: 10px;
     padding: 25px; 
@@ -36,7 +32,9 @@ body {
     display: flex;
     align-items: center;
     height: 150px; /* Defines the height of the row/unit */
-    background-color: rgb(241, 235, 235);
+    width: 100%;
+    clear: both; 
+    background-color: rgb(153, 76, 24);
     border: 1px solid black;
     border-radius: 10px;
     padding: 25px; 
@@ -49,7 +47,9 @@ body {
     display: flex;
     align-items: center;
     height: 150px; /* Defines the height of the row/unit */
-    background-color: rgb(241, 235, 235);
+    width: 100%;
+    clear: both; 
+    background-color: rgb(153, 76, 24);
     border: 1px solid black;
     border-radius: 10px;
     padding: 25px; 
@@ -62,18 +62,34 @@ body {
     display: flex;
     align-items: center;
     height: 150px; /* Defines the height of the row/unit */
-    background-color: rgb(241, 235, 235);
+    width: 100%;
+    clear: both; 
+    background-color: rgb(153, 76, 24);
     border: 1px solid black;
     border-radius: 10px;
     padding: 25px; 
     margin-bottom: 30px;
     box-shadow: 0 0 10px rgba(197,197,197);
-    
-    
 }
-.content-box {
-    /* Base styling for all boxes */
+
+.container {
+    /* Create a 2x2 grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-rows: auto auto; /* Two rows */
+    gap: 200px; /* Space between the four units */
+    max-width: 1000px; /* Optional: Sets max width for the whole layout */
+    margin: auto; /* Center the grid on the page */
+}
+
+/* Styling for the Black Blocks */
+.black-box {
+    background-color: rgb(218, 192, 44);
+    color: white;
     height: 100%;
+    width: 30%; /* Set the width for the descriptive black block */
+    text-align: left;
+    padding: 15px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,18 +98,10 @@ body {
     box-sizing: border-box;
 }
 
-/* Styling for the Black Blocks */
-.black-box {
-    background-color: black;
-    color: white;
-    width: 30%; /* Set the width for the descriptive black block */
-    text-align: left;
-    padding: 15px 10px;
-}
-
 .page-number {
     font-size: 24px;
     font-weight: bold;
+    color: rgb(173, 153, 40);
 }
 
 .description {
@@ -103,33 +111,16 @@ body {
 /* Styling for the Empty Blocks */
 .empty-box {
     /* Creates the white box with the crossed lines */
-    background-color: white;
-    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
     width: 70%; /* Fills the remaining space */
     position: relative;
-}
-
-.empty-box::before,
-.empty-box::after {
-    /* Create the 'X' */
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 1px;
+    display: flex;
     height: 100%;
-    background-color: black;
-    transform-origin: center;
-}
-
-.empty-box::before {
-    /* Line 1 (/) */
-    transform: translateX(-50%) rotate(45deg);
-}
-
-.empty-box::after {
-    /* Line 2 (\) */
-    transform: translateX(-50%) rotate(-45deg);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 /* Specific alignment for Page 3 and Page 4 */
@@ -139,32 +130,39 @@ body {
     flex-direction: row-reverse;
 }
 
-.right-align {
+.black-box right-align{
     /* Adjust text alignment for black boxes on the right side */
     align-items: flex-end;
     text-align: right;
+    display: flex;
 } 
 
 /* Style Section for Website Explanation (Travs) */
 .explanSection { 
-    background-color: rgb(241, 235, 235);
-    border: 1px solid black;
     border-radius: 10px;
     padding: 25px; 
-    margin-bottom: 30px;
     box-shadow: 0 0 10px rgba(197,197,197);
     text-align: center;
+    align-items: center;
+    width: auto;
+    background-color: rgba(202, 116, 59, 0.8);
+    border: 4px solid black;
+    height: 100px;
+    margin: 10vh;
 } 
 
 /* Style Section for Other Webpage Hyperlinks (Travs) */
 .indexLinks {
-    background-color: rgb(241, 235, 235);
-    border: 1px solid black;
     border-radius: 10px;
     padding: 25px; 
-    margin-bottom: 30px;
     box-shadow: 0 0 10px rgba(197,197,197);
     text-align: center;
+    width: auto;
+    background-color: rgba(202, 116, 59, 0.8);
+    border: 4px solid black;
+    border-radius: 10px;
+    padding: 25px; 
+    margin: 10vh;
 }
 
 .center {
@@ -172,22 +170,54 @@ body {
             text-align: center;
             margin: 0 auto;
         }
- header {
-        background-color: #f4f4f4;
-        padding: 10px;
-        display: flex;              /* Use flexbox for easy alignment */
-        justify-content: space-between; /* Space between text and image */
-        align-items: center;        /* Vertically center items */
-    }
+     
+header {
+    background-color: rgba(190, 126, 30, 0.849); 
+    border: 4px solid black;
+    width: auto;
+    height: 110px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: flex;              /* Use flexbox for easy alignment */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center;        /* Vertically center items */
+}  
+
 
     /* Style the image */
-    header img {
-        width: 120px;   /* Change width */
-        height: auto;   /* Keep aspect ratio */
-        object-fit: contain; /* Prevent distortion */
-    }
+header img {
+    width: 120px;   /* Change width */
+    height: auto;   /* Keep aspect ratio */
+    object-fit: contain; /* Prevent distortion */
+}
 
-    /* Optional: move image further right with margin */
-    .right-image {
-        margin-left: auto; /* Push image to the far right */
-    }
+/* Optional: move image further right with margin */
+.right-image {
+    margin-left: auto; /* Push image to the far right */
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(241, 212, 48);
+}
+
+footer {
+    background-color: rgba(190, 126, 30, 0.849); 
+    border: 4px solid black;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.empty-box img {
+    object-fit: contain; /* Ensure the image fits within the box without distortion */
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
