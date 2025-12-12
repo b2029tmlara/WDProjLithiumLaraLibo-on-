@@ -23,7 +23,13 @@ body {
     box-sizing: border-box;
 }
 
-
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
 
 /* Main container for context */
 .main-container {
@@ -127,69 +133,15 @@ body {
     overflow: hidden;
 }
 
-<<<<<<< HEAD
-.iframe-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%; /* This creates a 16:9 aspect ratio (9/16 = 0.5625) */
-}
-
-.iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none; /* Removes the default iframe border */
-}
-
-/* Navigation Styles */
-nav {
-    background-color: #724d2b;
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
-    transition: background-color 0.3s;
-    font-weight: bold;
-}
-
-nav a:hover {
-    background-color: #a00;
-}
-
-/* Navigation: Stack links vertically */
-    nav a {
-        display: block;
-        width: 100%;
-        box-sizing: border-box;
-        border-bottom: 1px solid rgba(255,255,255,0.2);
-    }
-
-    nav a:last-child {
-        border-bottom: none;
-    }
-=======
 .explanSection img {
     display: block;
     max-width: 100%;       /* never exceed section width */
     max-height: 100%;      /* never exceed section height */
     height: 700px;
     width: 700px;
-    margin: 0 auto;        /* center horizontally */
+    margin: 0 auto;       /* center horizontally */
     object-fit: contain;   /* keep proportions */
 }
->>>>>>> d3b79dd78e037ae97d540902890d3528d5f62218
 
 .explanSection2 { 
     border-radius: 10px;
@@ -233,42 +185,6 @@ header {
     align-items: center;        /* Vertically center items */
 }  
 
-/*piano CSS*/
-.key {
-            position: absolute;
-            cursor: pointer;
-            box-sizing: border-box;
-            transition: background-color 0.1s ease;
-        }
-
-        .key.white {
-            width: 25px;
-            height: 100%;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-top: none;
-            border-left: none; 
-            z-index: 1;
-        }
-
-        .key.black {
-            width: 16px;
-            height: 60%;
-            background-color: #000;
-            border: 1px solid #333;
-            z-index: 2;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-        }
-
-        .key.pressed.white {
-            background-color: #ccc;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .key.pressed.black {
-            background-color: #444;
-            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
-        }
 
     /* Style the image */
 header img {
@@ -351,3 +267,152 @@ nav a {
 nav a:hover {
     background-color: #a00;
 }
+
+footer {
+    background-color: rgba(190, 126, 30, 0.85); 
+    border: 4px solid black;
+    padding: 20px;
+    margin-top: auto; 
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    font-size: 0.9em;
+}
+
+.footer-col.center-col {
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.footer-col.right {
+    text-align: right;
+}
+
+.footer-col.left {
+    text-align: left;
+}
+
+.footer-col p, .footer-col ul {
+    margin: 5px 0;
+}
+
+.majorChordsSection { 
+    border-radius: 10px;
+    padding: 25px; 
+    box-shadow: 0 0 10px rgba(197,197,197);
+    width: auto;
+    background-color: rgba(202, 116, 59, 0.8);
+    border: 4px solid black;
+    margin: 10vh auto;
+    box-sizing: border-box;    
+    text-align: center;      /* fixes float alignment */
+    overflow: hidden;
+}
+.minorChordsSection { 
+    border-radius: 10px;
+    padding: 25px; 
+    box-shadow: 0 0 10px rgba(197,197,197);
+    width: auto;
+    background-color: rgba(202, 116, 59, 0.8);
+    border: 4px solid black;
+    margin: 10vh auto;
+    box-sizing: border-box;    
+    text-align: center;      /* fixes float alignment */
+    overflow: hidden;
+}
+
+.row1 {
+    display: flex;               /* put children in a row */
+    justify-content: space-between; /* space them evenly */
+    align-items: flex-start;     /* align headings/images at the top */
+    gap: 20px;                   /* optional spacing between items */
+    flex-wrap: wrap;             /* allows wrapping on smaller screens */
+}
+
+.row1 > div {
+    flex: 1 1 30%;               /* grow/shrink, take ~30% of container */
+    text-align: center;          /* center the heading and image */
+    box-sizing: border-box;
+}
+
+.row1 img {
+    max-width: 100%;             /* image fits within its div */
+    width: 200px;
+    height: auto;                /* maintain aspect ratio */
+    display: block;
+    margin: 0 auto;              /* center image */
+}
+
+.row2 {
+    display: flex;               /* put children in a row */
+    justify-content: space-between; /* space them evenly */
+    align-items: flex-start;     /* align headings/images at the top */
+    gap: 20px;                   /* optional spacing between items */
+    flex-wrap: wrap;             /* allows wrapping on smaller screens */
+}
+
+.row2 > div {
+    flex: 1 1 30%;               /* grow/shrink, take ~30% of container */
+    text-align: center;          /* center the heading and image */
+    box-sizing: border-box;
+}
+
+.row2 img {
+    max-width: 100%;             /* image fits within its div */
+    width: 200px;
+    height: auto;                /* maintain aspect ratio */
+    display: block;
+    margin: 0 auto;              /* center image */
+}
+.row3 {
+    display: flex;               /* put children in a row */
+    justify-content: space-between; /* space them evenly */
+    align-items: flex-start;     /* align headings/images at the top */
+    gap: 20px;                   /* optional spacing between items */
+    flex-wrap: wrap;             /* allows wrapping on smaller screens */
+}
+
+.row3 > div {
+    flex: 1 1 30%;               /* grow/shrink, take ~30% of container */
+    text-align: center;          /* center the heading and image */
+    box-sizing: border-box;
+}
+
+.row3 img {
+    max-width: 100%;             /* image fits within its div */
+    width: 200px;
+    height: auto;                /* maintain aspect ratio */
+    display: block;
+    margin: 0 auto;              /* center image */
+}
+.row4 {
+    display: flex;               /* put children in a row */
+    justify-content: space-between; /* space them evenly */
+    align-items: flex-start;     /* align headings/images at the top */
+    gap: 20px;                   /* optional spacing between items */
+    flex-wrap: wrap;             /* allows wrapping on smaller screens */
+}
+
+.row4 > div {
+    flex: 1 1 30%;               /* grow/shrink, take ~30% of container */
+    text-align: center;          /* center the heading and image */
+    box-sizing: border-box;
+}
+
+.row4 img {
+    max-width: 100%;             /* image fits within its div */
+    width: 200px;
+    height: auto;                /* maintain aspect ratio */
+    display: block;
+    margin: 0 auto;              /* center image */
+}
+
