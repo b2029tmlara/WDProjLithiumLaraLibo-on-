@@ -9,23 +9,137 @@
     <link rel="icon" href="../assets/pianologo.jpg" sizes="20x20" type="image/jng">
     <link rel="stylesheet" href="pagestyles.css">
     <script src="script.js" defer></script>
+    <style>
+    .explanSection { 
+    border-radius: 10px;
+    padding: 25px; 
+    box-shadow: 0 0 10px rgba(197,197,197);
+    text-align: center;
+    align-items: center;
+    width: auto;
+    background-color: rgba(202, 116, 59, 0.8);
+    border: 4px solid black;
+    height: 450px;
+    margin: 10vh;
+} 
+    </style>
 </head>
 
 <body>
 <div class="center">
 <header> 
-    <h1> 88 Keys </h1>
+    <h1> 88 Keys: Interactive Piano </h1>
     <img src="../assets/pianologo.jpg"  alt="Logo" class="right-image"> 
-    
 </header>
 
+<nav>
+        <a href="/ProjectPages/Page1.html"> History </a>
+        <a href="/ProjectPages/Page2.html"> Mechanisms </a>
+        <a href="/ProjectPages/Page3.html"> Basic Chords </a>
+        <a href="../index.html"> Home </a>
+    </nav>
 
 <section class="explanSection"> 
-<h1> Interactive Piano </h1>
-<div>
-    <p> Welcome to the 88 Keys project! This website is dedicated to providing an interactive experience for piano enthusiasts and learners alike. Explore the various pages to discover features such as virtual piano keys, tutorials, and resources to enhance your musical journey. Whether you're a beginner or an experienced pianist, 88 Keys has something for everyone. Enjoy your time here and happy playing! </p>
-</div>
+<p> The 88-key piano, the standard configuration for modern acoustic pianos, is defined by its range of keys: <b> 52 white keys and 36 black keys </b>, totaling seven full octaves plus a minor third (from A0 to C8). <br/>
+    This range was standardized during the Industrial Revolution, providing composers like <b><i>Liszt and Chopin</i></b> the expansive musical canvas required for the Romantic era's complex and emotionally deep compositions. <br/>
+    The arrangement of the keys follows a predictable pattern of two black keys and three black keys recurring across the keyboard, which is essential for understanding musical intervals and scales. <br/> 
+    The piano's structure allows it to produce a vast spectrum of tones, from the lowest rumbling bass notes to the highest shimmering treble notes, making it one of the most versatile and important instruments in Western music. <br/>
+
+<p> The piano's unique capability lies in its dynamic range—the ability to produce notes at varying volumes depending on the force applied by the player. <br/>
+    This feature, originally termed <b> gravicembalo col piano e forte </b> (harpsichord with soft and loud), is what gave the instrument its name. 
+    Unlike its predecessors, the harpsichord and clavichord, the modern piano uses a complex hammer mechanism invented by <b><i>Bartolomeo Cristofori around 1700.</i></b> <br/> 
+    When a key is pressed, a felt hammer strikes the corresponding set of strings, and the speed of the hammer determines the volume. 
+    The 88-key layout, combined with this mechanical innovation, allows for incredible expressive control over volume and tone, enabling the piano to be utilized as a solo instrument, in concertos, and as an accompanying instrument across nearly every musical genre. </p>
+<p><b> Interact with the piano below! This is a replica of a real piano with 88 keys made possible with JavaScript </b></p>
+ </p>
 </section>
+<div id="piano-container">
+<script> 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const pianoContainer = document.getElementById('piano-container');
+    const whiteKeyWidth = 25;
+    const blackKeyWidth = 16;
+
+    const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+    const startOctave = 0;
+    const endOctave = 8;
+    
+    let keyPosition = 0;
+    let startIndex = 9; 
+
+    for (let o = startOctave; o <= endOctave; o++) {
+        let start = (o === 0) ? startIndex : 0;
+        let end = (o === endOctave) ? 1 : notes.length;
+
+        for (let i = start; i < end; i++) {
+            const note = notes[i];
+            const noteName = `${note}${o}`;
+            
+            if (noteName === 'A0') {
+                keyPosition = 0;
+            } else if (noteName === 'B0') {
+                keyPosition = 1;
+            }
+
+            const key = document.createElement('div');
+            key.classList.add('key');
+            key.setAttribute('data-note', noteName);
+            
+            if (note.includes('#')) {
+                key.classList.add('black');
+                key.style.left = `${keyPosition * whiteKeyWidth - (blackKeyWidth / 2)}px`;
+            } else {
+                key.classList.add('white');
+                key.style.left = `${keyPosition * whiteKeyWidth}px`;
+                keyPosition++;
+            }
+            
+            pianoContainer.appendChild(key);
+        }
+    }
+    
+    pianoContainer.addEventListener('mousedown', (event) => {
+        const clickedKey = event.target.closest('.key');
+        if (clickedKey) {
+            clickedKey.classList.add('pressed');
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        document.querySelectorAll('.key.pressed').forEach(k => k.classList.remove('pressed'));
+    });
+
+    const keyboardMap = {
+        'z': 'A0', 'x': 'B0',
+        'a': 'C1', 'w': 'C#1', 's': 'D1', 'e': 'D#1', 'd': 'E1', 'f': 'F1', 't': 'F#1', 'g': 'G1', 'y': 'G#1', 'h': 'A1', 'u': 'A#1', 'j': 'B1',
+        'k': 'C2', 'o': 'C#2', 'l': 'D2', 'p': 'D#2', ';': 'E2', "'": 'F2', '[': 'F#2', ']': 'G2', '\\': 'G#2',
+        '1': 'A2', '2': 'A#2', '3': 'B2',
+    };
+
+    document.addEventListener('keydown', (event) => {
+        const note = keyboardMap[event.key.toLowerCase()];
+        if (note) {
+            const keyElement = document.querySelector(`.key[data-note="${note}"]`);
+            if (keyElement && !keyElement.classList.contains('pressed')) {
+                keyElement.classList.add('pressed');
+            }
+        }
+    });
+
+    document.addEventListener('keyup', (event) => {
+        const note = keyboardMap[event.key.toLowerCase()];
+        if (note) {
+            const keyElement = document.querySelector(`.key[data-note="${note}"]`);
+            if (keyElement) {
+                keyElement.classList.remove('pressed');
+            }
+        }
+    });
+});
+</script>
+
+    </div>
 
 <footer> 
         <p>&copy; 2025 Travis Marco Lara Nathan Allen Libo-on, PSHS-MC B2029. All Rights Reserved.</p>
