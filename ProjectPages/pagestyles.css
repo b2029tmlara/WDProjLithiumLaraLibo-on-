@@ -118,15 +118,16 @@ body {
     border-radius: 10px;
     padding: 25px; 
     box-shadow: 0 0 10px rgba(197,197,197);
-    text-align: center;
-    align-items: center;
     width: auto;
     background-color: rgba(202, 116, 59, 0.8);
     border: 4px solid black;
-    height: 600px;
-    margin: 10vh;
-} 
+    margin: 10vh auto;
+    box-sizing: border-box;    
+    text-align: center;      /* fixes float alignment */
+    overflow: hidden;
+}
 
+<<<<<<< HEAD
 .iframe-container {
   position: relative;
   overflow: hidden;
@@ -178,7 +179,40 @@ nav a:hover {
     nav a:last-child {
         border-bottom: none;
     }
+=======
+.explanSection img {
+    display: block;
+    max-width: 100%;       /* never exceed section width */
+    max-height: 100%;      /* never exceed section height */
+    height: 700px;
+    width: 700px;
+    margin: 0 auto;        /* center horizontally */
+    object-fit: contain;   /* keep proportions */
+}
+>>>>>>> d3b79dd78e037ae97d540902890d3528d5f62218
 
+.explanSection2 { 
+    border-radius: 10px;
+    padding: 25px; 
+    box-shadow: 0 0 10px rgba(197,197,197);
+    width: auto;
+    background-color: rgba(202, 116, 59, 0.8);
+    border: 4px solid black;
+    margin: 10vh auto;
+    box-sizing: border-box;    
+    text-align: center;      /* fixes float alignment */
+    overflow: hidden;
+}
+
+.explanSection2 img {
+    display: block;
+    max-width: 100%;       /* never exceed section width */
+    max-height: 100%;      /* never exceed section height */
+    height: 650px;
+    width: 650px;
+    margin: 0 auto;        /* center horizontally */
+    object-fit: contain;   /* keep proportions */
+}
 .center {
            align-items: center;
             text-align: center;
@@ -263,4 +297,57 @@ footer {
     margin-top: 20px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
+}
+
+.description-box-page2-1 {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    width: 300px;
+    float: left;
+    margin-right: 20px;  /* space between box and image */
+    text-align: left;    /* optional, looks better for text */
+    border-radius: 10px;
+    max-width: 100%;       /* never exceed section width */
+    max-height: 100%;
+    object-fit: contain;
+}
+.description-box-page2-2 {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    font-weight: bold;
+    width: 300px;
+    float: right;
+    margin-right: 20px;  /* space between box and image */
+    text-align: left;    /* optional, looks better for text */
+    border-radius: 10px;
+    max-width: 100%;       /* never exceed section width */
+    max-height: 100%;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #724d2b;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #a00;
 }
