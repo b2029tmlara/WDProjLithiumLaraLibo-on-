@@ -18,6 +18,107 @@ body {
     background-attachment: fixed;
 }
 
+/* Basic page resets */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Main container for context */
+.main-container {
+    background-color: #fff;
+    width: 90%;
+    max-width: 1000px;
+    border: 2px solid black; /* Thick border per wireframe */
+    padding: 20px;
+}
+
+/* The black "History" header block */
+.history-header-block {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 50%;
+    margin: 0 auto 40px auto; /* Center horizontally, margin bottom for spacing */
+}
+
+.history-header-block h2 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* --- Layout for the 3 Containers --- */
+
+/* Flex container to hold left and right columns */
+.history-content-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; /* Space between the left and right columns */
+}
+
+.column {
+    width: 45%; /* Columns take up slightly less than half each */
+}
+
+/* Right column specific styles to vertically center its single item */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Wrapper for a single pair (Image X box + Description box) */
+.content-item {
+    margin-bottom: 40px; /* Spacing between vertical items on the left */
+    width: 90%; /* Keep items slightly narrower than their column width */
+}
+
+/* Remove margin from the last item so it sits flush */
+.left-column .content-item:last-child {
+    margin-bottom: 0;
+}
+
+/* --- The Image Placeholder "X" Box --- */
+.image-placeholder-x {
+    width: 100%;
+    height: 120px; /* Fixed height for the image placeholders */
+    background-color: #fff;
+    border: 1px solid #000;
+    margin-bottom: 5px; /* Small gap between image box and description */
+    position: relative;
+    /* Using gradients to draw the corner-to-corner X */
+    background: 
+        linear-gradient(to top left,
+            transparent calc(50% - 1px),
+            black 50%,
+            transparent calc(50% + 1px)
+        ),
+        linear-gradient(to top right,
+            transparent calc(50% - 1px),
+            black 50%,
+            transparent calc(50% + 1px)
+        );
+    background-color: #fff; /* Ensure bg is white behind lines */
+}
+
+/* --- The Black Description Box --- */
+.description-box {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    font-weight: bold;
+    /* Assuming the description box is slightly narrower than the image box in wireframe */
+    width: 100%; 
+}
 
 .explanSection { 
     border-radius: 10px;
@@ -28,7 +129,7 @@ body {
     width: auto;
     background-color: rgba(202, 116, 59, 0.8);
     border: 4px solid black;
-    height: 150px;
+    height: 600px;
     margin: 10vh;
 } 
 

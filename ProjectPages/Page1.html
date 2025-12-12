@@ -8,27 +8,322 @@
     <title>88 Keys</title>
     <link rel="icon" href="../assets/pianologo.jpg" sizes="20x20" type="image/jng">
     <link rel="stylesheet" href="pagestyles.css">
+        <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+
+    <style> html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../assets/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: auto;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.center {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+     
+header {
+    background-color: rgba(190, 126, 30, 0.85); 
+    border: 4px solid black;
+    /* Removed fixed height to allow growing on mobile */
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;        
+}  
+
+header img {
+    width: 120px;   
+    height: auto;   
+    object-fit: contain; 
+}
+
+.right-image {
+    margin-left: auto; 
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(241, 212, 48);
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #724d2b;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #a00;
+}
+
+/* Main Content Section */
+.explanSection { 
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(197,197,197);
+    text-align: center;
+    background-color: rgba(202, 116, 59, 0.8);
+    border: 4px solid black;
+    height: auto; 
+    margin-bottom: 20px;
+    overflow: hidden;
+} 
+
+.section-title-box {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-bottom: 2px solid white;
+}
+
+.section-title-box h2 {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.content-container {
+    padding: 25px;
+    text-align: left;
+}
+
+.history-block {
+    margin-bottom: 30px;
+    border-bottom: 1px dashed black;
+    padding-bottom: 20px;
+}
+
+.history-block:last-child {
+    border-bottom: none;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(190, 126, 30, 0.85); 
+    border: 4px solid black;
+    padding: 20px;
+    margin-top: auto; 
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    font-size: 0.9em;
+}
+
+.footer-col.center-col {
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.footer-col.right {
+    text-align: right;
+}
+
+.footer-col.left {
+    text-align: left;
+}
+
+.footer-col p, .footer-col ul {
+    margin: 5px 0;
+}
+
+/* =========================================
+   MEDIA QUERIES FOR RESPONSIVENESS
+========================================= */
+
+/* Tablet and smaller screens (below 768px) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Smaller title */
+    }
+
+    header img {
+        width: 100px; /* Smaller logo */
+    }
+
+    .content-container {
+        padding: 20px; /* Less padding */
+    }
+
+    nav a {
+        padding: 10px 15px; /* Smaller nav links */
+    }
+}
+
+/* Mobile phones (below 600px) */
+@media (max-width: 600px) {
+    /* Header: Stack title and logo */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right-image {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    /* Navigation: Stack links vertically */
+    nav a {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    /* Footer: Stack columns and center text */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-col {
+        width: 100%;
+        min-width: auto;
+        margin-bottom: 15px;
+        border: none !important; /* Remove borders on stack */
+    }
+    
+    .footer-col.left, .footer-col.right {
+        text-align: center;
+    }
+}
+    </style>
 </head>
 
 <body>
 <div class="center">
-<header> 
-    <h1> 88 Keys </h1>
-    <img src="../assets/pianologo.jpg"  alt="Logo" class="right-image"> 
+<div class="center">
     
-</header>
+    <header> 
+        <h1> 88 Keys </h1>
+        <img src="../assets/pianologo.jpg"  alt="Logo" class="right-image"> 
+    </header>
 
+    <nav>
+        <a href="#origins">Origins</a>
+        <a href="#golden-age">Golden Age</a>
+        <a href="#modern-piano">The Modern Piano</a>
+        <a href="#references">References</a>
+        <a href="../index.html"> Home </a>
+    </nav>
 
-<section class="explanSection"> 
-<h1> History </h1>
-    <p> Welcome to the 88 Keys project! This website is dedicated to providing an interactive experience for piano enthusiasts and learners alike. Explore the various pages to discover features such as virtual piano keys, tutorials, and resources to enhance your musical journey. Whether you're a beginner or an experienced pianist, 88 Keys has something for everyone. Enjoy your time here and happy playing! </p>
-</section>
+    <section class="explanSection"> 
+        
+        <div class="section-title-box">
+            <h2>History</h2>
+        </div>
 
-<footer> 
-        <p>&copy; 2025 Travis Marco Lara Nathan Allen Libo-on, PSHS-MC B2029. All Rights Reserved.</p>
-        <p> b2029tmlara@pshs.edu.ph, b2029nalliboon@pshs.edu.ph </p>
-</footer>
+        <div class="content-container">
+            <div class="history-block" id="origins">
+                <h3>1. The Birth of the Piano (c. 1700s)</h3>
+                <p>
+                    The piano evolved from earlier keyboard instruments like the clavichord and the harpsichord. 
+                    Unlike its predecessors, the piano could produce notes at various volumes depending on the force of the player's touch, a feature known as <i>gravicembalo col piano e forte</i> (harpsichord with soft and loud). <br>
+                    In simpler terms, this is known as <i> musical dynamics </i>.
+                </p>
+                <p>
+                    This innovation is credited to <b> Bartolomeo Cristofori </b> in Florence, Italy, around the year 1700. His fundamental mechanical design—using hammers to strike the strings—remains the basis for all modern pianos.
+                </p>
+            </div>
+
+            <div class="history-block" id="golden-age">
+                <h3>2. The Golden Age: Vienna and Composers</h3>
+                <p>
+                    The late 18th and early 19th centuries saw the piano rise to prominence in both concert halls and homes. This period is often called the Golden Age.
+                </p>
+                <ul>
+                    <li> <b> The Viennese Action: </b> Early pianos featured lighter construction and a mechanism known as the Viennese action, favored by composers like Wolfgang Amadeus Mozart.</li>
+                    <li> <b> Beethoven's Influence: </b> Ludwig van Beethoven pushed the emotional and technical capabilities of the instrument, demanding stronger construction and wider pitch ranges from instrument builders.</li>
+                    <li> <b> Romantic Era Expansion: </b> Composers like Chopin and Liszt further popularized the piano, using its expressive range to define the Romantic musical style.</li>
+                </ul>
+            </div>
+
+            <div class="history-block" id="modern-piano">
+                <h3>3. The Industrial Revolution and the Modern Piano</h3>
+                <p>
+                    The mid-19th century brought industrial manufacturing and technological advancements that transformed the piano into the robust instrument we know today.
+                </p>
+                <ul>
+                    <li> <b> Iron Frame: </b> The introduction of the solid cast-iron frame by Alpheus Babcock allowed for much higher string tension, giving the piano its greater volume and sustained tone. </li>
+                    <li> <b> Felted Hammers: </b> Changes to the hammer material (from leather to felt) provided a richer, warmer tone.</li> 
+                    <li> <b> Mass Production: </b> Companies like Steinway & Sons and Bechstein standardized and mass-produced instruments, making them accessible across social classes.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer> 
+        <div class="footer-col left">
+            <p><b>Contact Info:</b></p>
+            <p>b2029tmlara@pshs.edu.ph</p>
+            <p>b2029nalliboon@pshs.edu.ph</p>
+        </div>
+        
+        <div class="footer-col center-col" id="references">
+            <p><b>SOURCES</b></p>
+            <ul style="list-style: none; padding: 0; font-style: italic;">
+                <li>Bie, O. (1899). A History of the Pianoforte.</li>
+                <li>Gillespie, J. (1965). Five Centuries of Keyboard Music.</li>
+            </ul>
+        </div>
+
+        <div class="footer-col right">
+            <p><b>Share / Copyright</b></p>
+            <p>&copy; 2025 Travis Marco Lara & Nathan Allen Libo-on</p>
+            <p>PSHS-MC B2029. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </div>
 </body>
