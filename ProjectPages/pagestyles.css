@@ -14,7 +14,7 @@ body {
     display: flex;
     font-family: 'Times New Roman', Times, serif;
     justify-content: center;
-    padding: 10px;
+    padding: 20px;
     background-attachment: fixed;
 }
 
@@ -22,15 +22,6 @@ body {
 * {
     box-sizing: border-box;
 }
-
-body {
-    font-family: sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
 /* Main container for context */
 .main-container {
     background-color: #fff;
@@ -260,8 +251,8 @@ footer {
 }
 
 .description-box-page2-1 {
-    background-color: #000;
-    color: #fff;
+    background-color: #dfa21e;
+    color: #000000;
     padding: 10px;
     font-weight: bold;
     width: 300px;
@@ -272,10 +263,11 @@ footer {
     max-width: 100%;       /* never exceed section width */
     max-height: 100%;
     object-fit: contain;
+    box-shadow: 0 0 10px rgba(197,197,197);
 }
 .description-box-page2-2 {
-    background-color: #000;
-    color: #fff;
+    background-color: #dfa21e;
+    color: #000000;
     padding: 10px 15px;
     font-weight: bold;
     width: 300px;
@@ -286,6 +278,7 @@ footer {
     max-width: 100%;       /* never exceed section width */
     max-height: 100%;
     box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(197,197,197);
 }
 
 nav {
@@ -459,5 +452,174 @@ footer {
     display: block;
     margin: 0 auto;              /* center image */
 }
+
+.cMAJOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.cdMAJOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.dMAJOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.deMAJOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.eMAJOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.fMAJOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.fgMAJOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.gMAJOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.gaMAJOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.aMAJOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.abMAJOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.bMAJOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.cMINOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.cdMINOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.dMINOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.deMINOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.eMINOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.fMINOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.fgMINOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.gMINOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.gaMINOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.aMINOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.abMINOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
+.bMINOR:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgba(202, 116, 59, 0.856);
+    border-radius: 10px;
+}
+
 
 
