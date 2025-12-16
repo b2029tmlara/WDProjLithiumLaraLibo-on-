@@ -52,7 +52,7 @@ body {
             height: 300px;
             border: 1px solid #333;
             background-color: #000;
-            margin: 0 auto;
+            margin: auto; 
         }
 
         .key {
@@ -621,6 +621,7 @@ footer {
     background-color: rgba(202, 116, 59, 0.856);
     border-radius: 10px;
 }
+
 
 
 
