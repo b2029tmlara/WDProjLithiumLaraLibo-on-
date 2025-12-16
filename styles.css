@@ -235,3 +235,10 @@ footer {
     transform: scale(1.05); /* Slightly enlarge the box on hover */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
 }
+
+.caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    margin-top: auto;
+}
