@@ -351,6 +351,10 @@ nav {
 }
 
 nav a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
     color: white;
     text-decoration: none;
     padding: 10px 20px;
@@ -362,6 +366,11 @@ nav a {
 nav a:hover {
     background-color: #a00;
 }
+
+   /* Navigation: Stack links vertically */
+    nav a:last-child {
+        border-bottom: none;
+    }
 
 footer {
     background-color: rgba(190, 126, 30, 0.85); 
@@ -678,6 +687,7 @@ footer {
     background-color: rgba(202, 116, 59, 0.856);
     border-radius: 10px;
 }
+
 
 
 
