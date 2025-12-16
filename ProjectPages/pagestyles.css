@@ -283,6 +283,13 @@ footer {
     box-shadow: 0 0 10px rgba(197,197,197);
 }
 
+.caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    margin-top: auto;
+}
+
 nav {
     background-color: #724d2b;
     width: 100%;
@@ -622,3 +629,4 @@ footer {
     background-color: rgba(202, 116, 59, 0.856);
     border-radius: 10px;
 }
+
