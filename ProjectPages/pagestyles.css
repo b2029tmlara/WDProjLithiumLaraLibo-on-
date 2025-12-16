@@ -52,7 +52,8 @@ body {
             height: 300px;
             border: 1px solid #333;
             background-color: #000;
-            margin: auto; 
+            margin: 0 auto;
+            margin-bottom: 10vh;
         }
 
         .key {
@@ -173,8 +174,8 @@ body {
     display: block;
     max-width: 100%;       /* never exceed section width */
     max-height: 100%;      /* never exceed section height */
-    height: 700px;
-    width: 700px;
+    height: 600px;
+    width: 600px;
     margin: 0 auto;       /* center horizontally */
     object-fit: contain;   /* keep proportions */
 }
@@ -621,8 +622,3 @@ footer {
     background-color: rgba(202, 116, 59, 0.856);
     border-radius: 10px;
 }
-
-
-
-
-
