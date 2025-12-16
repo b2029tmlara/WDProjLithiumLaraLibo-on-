@@ -221,7 +221,7 @@ footer {
 }
 
 .pageButton:hover {
-    background-color: #231709; /* Change background color on hover */
+    background-color: #008CBA; /* Change background color on hover */
     transform: scale(1.1);
 }
 
