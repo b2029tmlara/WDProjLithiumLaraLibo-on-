@@ -180,7 +180,18 @@ body {
     object-fit: contain;   /* keep proportions */
 }
 
+.explanSection img {
+    display: block;
+    max-width: 100%;       /* never exceed section width */
+    max-height: 100%;      /* never exceed section height */
+    height: 700px;
+    width: 700px;
+    margin: 0 auto;        /* center horizontally */
+    object-fit: contain;   /* keep proportions */
+}
+
 .explanSection2 { 
+
     border-radius: 10px;
     padding: 25px; 
     box-shadow: 0 0 10px rgba(197,197,197);
@@ -190,8 +201,7 @@ body {
     margin: 10vh auto;
     box-sizing: border-box;    
     text-align: center;      /* fixes float alignment */
-    overflow: hidden;
-}
+    overflow: hidden;}
 
 .explanSection2 img {
     display: block;
@@ -202,6 +212,7 @@ body {
     margin: 0 auto;        /* center horizontally */
     object-fit: contain;   /* keep proportions */
 }
+
 .center {
            align-items: center;
             text-align: center;
@@ -629,4 +640,5 @@ footer {
     background-color: rgba(202, 116, 59, 0.856);
     border-radius: 10px;
 }
+
 
