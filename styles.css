@@ -229,3 +229,9 @@ footer {
     outline: none; /* Remove default focus outline for custom styling */
     box-shadow: 0 0 0 4px #5a01a7; /* Add a custom focus ring for accessibility */
 }
+
+.firstPage:hover, .secondPage:hover, .thirdPage:hover, .fourthPage:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glow effect on hover */
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
