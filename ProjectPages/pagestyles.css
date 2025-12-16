@@ -213,6 +213,44 @@ body {
     object-fit: contain;   /* keep proportions */
 }
 
+/* Footer */
+footer {
+    background-color: rgba(190, 126, 30, 0.85); 
+    border: 4px solid black;
+    padding: 20px;
+    margin-top: auto; 
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    font-size: 0.9em;
+}
+
+.footer-col.center-col {
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.footer-col.right {
+    text-align: right;
+}
+
+.footer-col.left {
+    text-align: left;
+}
+
+.footer-col p, .footer-col ul {
+    margin: 5px 0;
+}
+
 .center {
            align-items: center;
             text-align: center;
@@ -640,5 +678,6 @@ footer {
     background-color: rgba(202, 116, 59, 0.856);
     border-radius: 10px;
 }
+
 
 
