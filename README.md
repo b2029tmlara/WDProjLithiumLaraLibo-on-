@@ -123,8 +123,8 @@ JavaScript will be used primarily to add the element of interactivity in the Int
 
 ## Page 6: 
 
-![Page6](./assets/page5.jpg "Page6")
+![Page6](./assets/page6.jpg "Page6")
 
 ## Page 7: 
 
-![Page7](./assets/page5.jpg "Page7")
+![Page7](./assets/page7.jpg "Page7")
