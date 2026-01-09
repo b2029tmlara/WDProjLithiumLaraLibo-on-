@@ -91,7 +91,7 @@ JavaScript will be used primarily to add the element of interactivity in the Int
 # New Additions: HTML Forms in Piano Practice Planner
 
 ## HTML Form Usage 
-HTML forms will be incorporated into the website such that they will extract the user's name, age, email, preferred musical genre, self-evaluated skill-level, how much they spends practicing the piano (in hours), and aid in the selection of practice plans.
+HTML forms will be incorporated into the website such that they will extract the user's name, age, email, preferred musical genre, self-evaluated skill-level, how much time they spend in practicing the piano (in hours), how many days in a week they practice,  and aid in the selection of practice plans.
 
 # Outlines
 
