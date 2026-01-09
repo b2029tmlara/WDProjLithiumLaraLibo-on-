@@ -50,8 +50,10 @@ PHILIPPINE SCIENCE HS - MC
 # JavaScript Usage
 JavaScript will be used primarily to add the element of interactivity in the Interactive Piano part, with functions to be called and return specific values in order for notes to be properly played by the user upon the click of keys on their keyboard.
 
+# HTML Form Usage 
+HTML forms will be incorporated into the website such that they will extract the how much the user spends practicing the piano (in hours), and aid in the selection of practice plans 
 
-# Wireframe:
+# Wireframes
 
 ## Home Page: 
 ![Homepage](./assets/homepage.jpg "Mountain View")
