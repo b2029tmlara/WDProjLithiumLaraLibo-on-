@@ -88,7 +88,7 @@ JavaScript will be used primarily to add the element of interactivity in the Int
 ![page2expnaded](./assets/page4expanded.jpg "Mountain View")
 
 
-# HTML Forms: Piano Practice Planner
+# New Additions: HTML Forms in Piano Practice Planner
 
 ## HTML Form Usage 
 HTML forms will be incorporated into the website such that they will extract the how much the user spends practicing the piano (in hours), and aid in the selection of practice plans 
