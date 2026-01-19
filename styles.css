@@ -12,6 +12,23 @@ body {
     background-attachment: fixed;
 }
 
+/* Style Section for Website Explanation (Travs) */
+.explainSection { 
+    border-radius: 10px;
+    padding: 25px; 
+    box-shadow: 0 0 10px rgba(197,197,197);
+    text-align: center;
+    align-items: center;
+    width: auto;
+    background-color: rgba(202, 116, 59, 0.8);
+    border: 4px solid black;
+    height: 150px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
 .firstPage {
     /* Use Flexbox to align the black and empty boxes horizontally */
     display: flex;
@@ -88,7 +105,7 @@ body {
     background-color: rgb(218, 192, 44);
     color: white;
     height: 100%;
-    width: 30%; /* Set the width for the descriptive black block */
+    width: 35%; /* Set the width for the descriptive black block */
     text-align: left;
     padding: 15px 10px;
     display: flex;
@@ -99,21 +116,24 @@ body {
     box-sizing: border-box;
 }
 
-.page-number {
-    font-size: 24px;
+.black-box right-align{
+    /* Adjust text alignment for black boxes on the right side */
+    align-items: flex-end;
+    text-align: right;
+    display: flex;
+} 
+
+.page-description {
+    font-size: 20px;
     font-weight: bold;
     color: rgb(173, 153, 40);
-}
-
-.description {
-    font-size: 14px;
 }
 
 /* Styling for the Empty Blocks */
 .empty-box {
     /* Creates the white box with the crossed lines */
     background-color: rgb(255, 255, 255);
-    width: 70%; /* Fills the remaining space */
+    width: 65%; /* Fills the remaining space */
     position: relative; 
     display: flex;
     height: 100%;
@@ -124,34 +144,20 @@ body {
     box-sizing: border-box;
 }
 
+.empty-box img {
+    object-fit: contain; /* Ensure the image fits within the box without distortion */
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
 /* Specific alignment for Page 3 and Page 4 */
 .page-unit:nth-child(2),
 .page-unit:nth-child(4) {
     /* Reverse the order of boxes for the right column (Page 3 & 4) */
     flex-direction: row-reverse;
 }
-
-.black-box right-align{
-    /* Adjust text alignment for black boxes on the right side */
-    align-items: flex-end;
-    text-align: right;
-    display: flex;
-} 
-
-/* Style Section for Website Explanation (Travs) */
-.explanSection { 
-    border-radius: 10px;
-    padding: 25px; 
-    box-shadow: 0 0 10px rgba(197,197,197);
-    text-align: center;
-    align-items: center;
-    width: auto;
-    background-color: rgba(202, 116, 59, 0.8);
-    border: 4px solid black;
-    height: 100px;
-    margin: 10vh;
-} 
-
 
 .center {
            align-items: center;
@@ -198,13 +204,6 @@ footer {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
-.empty-box img {
-    object-fit: contain; /* Ensure the image fits within the box without distortion */
-    height: 100%;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-}
 
 .pageButton {
     background-color: #c5732f; /* Brown background */
@@ -235,6 +234,8 @@ footer {
     transform: scale(1.05); /* Slightly enlarge the box on hover */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
 }
+
+
 
 .caption {
     text-align: center;
