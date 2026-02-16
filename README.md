@@ -50,8 +50,7 @@ PHILIPPINE SCIENCE HS - MC
 # JavaScript Usage
 JavaScript will be used primarily to add the element of interactivity in the Interactive Piano part, with functions to be called and return specific values in order for notes to be properly played by the user upon the click of keys on their keyboard.
 
-
-# Wireframe:
+# Wireframes
 
 ## Home Page: 
 ![Homepage](./assets/homepage.jpg "Mountain View")
@@ -87,3 +86,46 @@ JavaScript will be used primarily to add the element of interactivity in the Int
 ## Page 4 Expanded
 
 ![page2expnaded](./assets/page4expanded.jpg "Mountain View")
+
+
+# New Additions: HTML Forms in Piano Practice Planner
+
+## HTML Form Usage 
+HTML forms will be incorporated into the website such that they will extract the user's name, age, email, preferred musical genre, self-evaluated skill-level, how much time they spend in practicing the piano (in hours), how many days in a week they practice,  and aid in the selection of practice plans.
+
+# Outlines
+
+### **VI. Sign up for PPP** 
+  * A. Links to page 6 and 7
+    1. Once the form is completed, the gathered info will be saved w the user will unlock the navigation to pages 6 and 7.
+  * B. Info Boxes
+    1. The user will input the required info here to unlock the PPP
+    2. Info such as name, age, skill level (beginner, intermediate, advanced), preffered genre (Jazz, Clasical, Pop, etc.), practice duration per day currently, how often they practice in a week, and their main goal (faster fingers, learn a new piece, etc.)
+  * C Links to page 6 and 7
+    1. Once the form is completed, the gathered info will be saved w the user will unlock the navigation to pages 7 and 8.
+### **VII. PPP for user**
+  * A. Main PPP
+    1. A Piano Practice Plan will be made for the user using the info inputed in page 5.
+  * B. Feedback and Recommendations
+    1. A set of pre made recommendations for improvement will be made in accordance with the inputed info.
+### **VIII. Resources for user**
+  * A. Images
+    1. A set of images that align with the users goal will appear to aid the user in their practices
+  * B. Audio Files
+    1. A set of audio files containing recommended songs to learn will appear based on the users preffered genre.
+    C. Videos
+    1. A set of youtube videos will appear based on the users skill level to help the user further progress.
+   
+# Wireframe:
+
+## Page 5: 
+
+![Page5](./assets/page5.jpg "Page5")
+
+## Page 6: 
+
+![Page6](./assets/page6.jpg "Page6")
+
+## Page 7: 
+
+![Page7](./assets/page7.jpg "Page7")

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ProjectPages">
+    <meta name="author" content="Nathan Allen Libo-on, Travis Marco Lara">
+    <title>88 Keys</title>
+    <link rel="icon" href="../assets/pianologo.jpg" sizes="20x20" type="image/jng">
+    <link rel="stylesheet" href="pagestyles.css">
+    <script src="script.js" defer></script>
+    
+    <meta charset="UTF-8">
+    <title> Personal Head </title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        /* Focus pseudo-class style */
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border: 2px solid #4A90E2;
+            background-color: #f0f7ff;
+        }
+        /* Style for empty fields on blur */
+        .input-error {
+            border: 2px solid #ff4d4d !important;
+            background-color: #fff2f2;
+        }
+        .button-group {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            width: auto;
+        }
+        input[type="reset"] {
+            background-color: #dc3545;
+            color: white;
+            width: auto;
+        }
+        .radio-group input {
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <form method="post" action="submit" onsubmit="return confirmAction('submit')" onreset="return confirmAction('reset')">
+        
+        <fieldset>
+            <legend>Personal Identification</legend>
+            <label>Student ID:
+                <input type="number" name="studentID" required onblur="checkEmpty(this)">
+            </label>
+            <label>Full Name:
+                <input type="text" name="fullName" required onblur="checkEmpty(this)">
+            </label>
+            <label>Birthday:
+                <input type="date" name="birthday" required>
+            </label>
+            <label>Email Address:
+                <input type="email" name="email" required onblur="checkEmpty(this)">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend> Piano Practice Details </legend>
+            <label>Mobile Phone:
+                <input type="text" name="phone" required onblur="checkEmpty(this)">
+            </label>
+            
+            <label> Grade Level:
+                <select name="gradeLevel" required>
+                    <option value="">--Select Level--</option>
+                    <option value="LVL_07">Grade 7</option>
+                    <option value="LVL_08">Grade 8</option>
+                    <option value="LVL_09">Grade 9</option>
+                    <option value="LVL_10">Grade 10</option>
+                    <option value="LVL_11">Grade 11</option>
+                    <option value="LVL_12">Grade 12</option>
+                </select>
+            </label>
+
+            <label class="radio-group">Status:
+                <br>
+                <input type="radio" name="status" value="INT" required> Intern
+                <input type="radio" name="status" value="EXT" required> Extern
+            </label>
+
+            <label> Preferred Musical Genre:
+                <select name="club" required>
+                    <option value="">--Select a Club--</option>
+                    <option value="CODE_SOC">Coding Society</option>
+                    <option value="DEB_UN">Debate Union</option>
+                    <option value="ART_G">Artistic Guild</option>
+                    <option value="ECO_W">Eco Warriors</option>
+                    <option value="MUS_ENS">Music Ensemble</option>
+                </select>
+            </label>
+
+        </fieldset>
+
+        <div class="button-group">
+            <input type="submit" value="Submit Information">
+            <input type="reset" value="Reset Form">
+        </div>
+
+    </form>
+    
+    <button> <a href="index.html"> Back Home </a></button>
+
+    <script>
+        // Event handler for submit and reset confirmations
+        function confirmAction(type) {
+            const message = type === 'submit' 
+                ? "Are you sure you want to submit your application?" 
+                : "Are you sure you want to clear all entered information?";
+            return confirm(message);
+        }
+
+        // Event handler for onblur validation
+        function checkEmpty(element) {
+            if (element.value.trim() === "") {
+                element.classList.add("input-error");
+            } else {
+                element.classList.remove("input-error");
+            }
+        }
+    </script>
+
+</body>
+</html>
