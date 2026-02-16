@@ -1,16 +1,16 @@
 header {
-    background-color: rgba(190, 126, 30, 0.849); 
+    background-color: rgba(190, 126, 30, 0.849);
     border: 4px solid black;
-    width: auto;
-    height: 110px;
-    padding: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    display: flex;              /* Use flexbox for easy alignment */
-    justify-content: space-between; /* Space between text and image */
-    align-items: center;        /* Vertically center items */
-}  
+    border-bottom: none;   /* 👈 Important */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(238, 188, 25);
+    margin-left: 5vw; /* Remove default margin */
+    margin-right: 5vw; /* Remove default margin */
+}
 
     /* Style the image */
 header img {
@@ -24,12 +24,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: auto;
-    width: auto;
-    display: flex;
-    font-family: 'Times New Roman', Times, serif;
-    justify-content: center;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;   /* makes header full width */
+    margin: 0;              /* remove default browser margin */
+    padding-top: 20px;
 }
 
 /* Basic page resets */
@@ -46,17 +46,16 @@ body {
 }
 
 .historySection {
-    border-radius: 10px;
-    padding: 0;
+   border-radius: 10px;
     box-shadow: 0 0 10px rgba(197,197,197);
-    text-align: center;
+    width: auto;
     background-color: rgba(202, 116, 59, 0.8);
     border: 4px solid black;
-    height: auto; 
-    margin-left: 15vw;
     margin-right: 15vw;
-    margin-top: 5v;
+    margin-left: 15vw;
     margin-bottom: 5vh;
+    box-sizing: border-box;    
+    text-align: center;      /* fixes float alignment */
     overflow: hidden;
 } 
 
@@ -290,18 +289,6 @@ footer {
     margin: 5px 0;
 }
 
-.center {
-           align-items: center;
-            text-align: center;
-            margin: 0 auto;
-        }
-
-h1 {
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(241, 212, 48);
-}
-
 .description-box-page2-1 {
     background-color: #dfa21e;
     color: #000000;
@@ -343,28 +330,23 @@ h1 {
 
 nav {
     background-color: #724d2b;
+    border: 4px solid black;
+    border-top: none;   /* 👈 Connects to header */
     padding: 10px 0;
-    box-shadow: 0 0 10px rgba(197,197,197);
-    border-radius: 5px;
-    text-align: center;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vh;
 }
 
 nav a {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
     color: white;
     text-decoration: none;
     padding: 10px 20px;
-    display: inline-block;
-    transition: background-color 0.3s;
     font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 nav a:hover {
@@ -378,7 +360,6 @@ nav a:hover {
 
 .majorChordsSection { 
     border-radius: 10px;
-    padding: 25px; 
     box-shadow: 0 0 10px rgba(197,197,197);
     width: auto;
     background-color: rgba(202, 116, 59, 0.8);

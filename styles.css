@@ -2,14 +2,15 @@ header {
     background-color: rgba(190, 126, 30, 0.849); 
     border: 4px solid black;
     width: auto;
-    height: 110px;
-    padding: 10px;
+    padding: 10px 20px;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
     display: flex;              /* Use flexbox for easy alignment */
     justify-content: space-between; /* Space between text and image */
     align-items: center;        /* Vertically center items */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(238, 188, 25);
 }  
 
 
@@ -25,30 +26,50 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: auto;
-    width: auto;
-    display: flex;
-    justify-content: center;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
-.center {
-           align-items: center;
-            text-align: center;
-            margin: 0 auto;
-        }
+.index-container {
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(197,197,197);
+    text-align: center;
+    background-color: rgba(202, 116, 59, 0.507);
+    border: 4px solid black;
+    height: auto; 
+    width: 80%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    overflow: hidden;
+    align-items: center;
+    display: block;
+}
+
+.section-title-box {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-bottom: 2px solid white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 /* Style Section for Website Explanation (Travs) */
 .explainSection { 
     border-radius: 10px;
+    border: 3px solid black;
     padding: 25px; 
     box-shadow: 0 0 10px rgba(197,197,197);
     text-align: center;
     align-items: center;
     width: auto;
-    background-color: rgba(202, 116, 59, 0.8);
-    margin-left: 15vw;
-    margin-right: 15vw;
+    background-color: rgba(202, 122, 69, 0.911);
+    margin-left: 5vw;
+    margin-right: 5vw;
     margin-top: 5vh;
     margin-bottom: 5vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -62,8 +83,8 @@ body {
     height: 300px; /* Defines the height of the row/unit */
     width: 100%;
     clear: both; 
-    background-color: rgb(153, 76, 24);
-    border: 1px solid black;
+    background-color: rgb(180, 126, 45);
+    border: 3px solid black;
     border-radius: 10px;
     padding: 25px; 
     margin-bottom: 30px;
@@ -77,8 +98,8 @@ body {
     height: 300px; /* Defines the height of the row/unit */
     width: 100%;
     clear: both; 
-    background-color: rgb(153, 76, 24);
-    border: 1px solid black;
+    background-color: rgb(180, 126, 45);
+    border: 3px solid black;
     border-radius: 10px;
     padding: 25px; 
     margin-bottom: 30px;
@@ -92,8 +113,8 @@ body {
     height: 300px; /* Defines the height of the row/unit */
     width: 100%;
     clear: both; 
-    background-color: rgb(153, 76, 24);
-    border: 1px solid black;
+    background-color: rgb(180, 126, 45);
+    border: 3px solid black;
     border-radius: 10px;
     padding: 25px; 
     margin-bottom: 30px;
@@ -107,8 +128,8 @@ body {
     height: 300px; /* Defines the height of the row/unit */
     width: 100%;
     clear: both; 
-    background-color: rgb(153, 76, 24);
-    border: 1px solid black;
+    background-color: rgb(180, 126, 45);
+    border: 3px solid black;
     border-radius: 10px;
     padding: 25px; 
     margin-bottom: 30px;
@@ -127,7 +148,7 @@ body {
 
 /* Styling for the Black Blocks */
 .black-box {
-    background-color: rgb(218, 192, 44);
+    background-color: rgb(218, 148, 44);
     color: white;
     height: 100%;
     width: 35%; /* Set the width for the descriptive black block */
@@ -151,7 +172,7 @@ body {
 .page-description {
     font-size: 20px;
     font-weight: bold;
-    color: rgb(173, 153, 40);
+    color: rgb(0, 0, 0);
 }
 
 /* Styling for the Empty Blocks */
@@ -174,6 +195,7 @@ body {
     height: 100%;
     width: 80%;
     display: flex;
+    margin: auto;
     justify-content: center;
 }
 
@@ -182,11 +204,6 @@ body {
 .page-unit:nth-child(4) {
     /* Reverse the order of boxes for the right column (Page 3 & 4) */
     flex-direction: row-reverse;
-}
-h1 {
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(241, 212, 48);
 }
 
 footer {
@@ -203,10 +220,8 @@ footer {
 .pageButton {
     background-color: #c5732f; /* Brown background */
     border: none;             /* Remove default border */
-    color: rgb(255, 218, 52);             /* White text color */
     padding: 15px 32px;       /* Space inside the button */
     text-align: center;       /* Center the text */
-    text-decoration: none;    /* Remove underline (if using <a> tag) */
     display: inline-block;    /* Allows padding/margin/width to work well */
     font-size: 20px;          /* Increase font size */
     cursor: pointer;          /* Change mouse cursor to a hand */
@@ -214,8 +229,14 @@ footer {
     transition-duration: 0.5s; /* Smooth transition for hover effects */
 }
 
+.pageButton a {
+    color: rgb(0, 0, 0); /* Ensure links inside buttons are white */
+    text-decoration: none; /* Remove underline from links */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .pageButton:hover {
-    background-color: #008CBA; /* Change background color on hover */
+    background-color: rgb(221, 174, 102);
     transform: scale(1.1);
 }
 
@@ -238,15 +259,23 @@ footer {
 }
 
 .visitButton {
-    background-color: #975824; /* Brown background */
+    background-color: #b47038; /* Brown background */
     border: none;             /* Remove default border */
     padding: 15px 32px;       /* Space inside the button */
     text-align: center;       /* Center the text */
     text-decoration: none;    /* Remove underline (if using <a> tag) */
     display: inline-block;    /* Allows padding/margin/width to work well */
-    font-size: 20px;          /* Increase font size */
+    font-size: 30px;          /* Increase font size */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black; /* Ensure text color is black */
     cursor: pointer;          /* Change mouse cursor to a hand */
     border-radius: 10px;       /* Rounded corners */
     transition-duration: 0.5s; /* Smooth transition for hover effects */
     margin: 40px;
+    width: 300px;
+}
+
+.visitButton:hover {
+    background-color: rgb(221, 174, 102);
+    transform: scale(1.1);
 }
