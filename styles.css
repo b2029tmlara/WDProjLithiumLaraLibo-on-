@@ -1,3 +1,24 @@
+header {
+    background-color: rgba(190, 126, 30, 0.849); 
+    border: 4px solid black;
+    width: auto;
+    height: 110px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: flex;              /* Use flexbox for easy alignment */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center;        /* Vertically center items */
+}  
+
+
+    /* Style the image */
+header img {
+    width: 120px;   /* Change width */
+    height: auto;   /* Keep aspect ratio */
+    object-fit: contain; /* Prevent distortion */
+}
 
 body {
     background-image: url("./assets/background.png");
@@ -7,10 +28,15 @@ body {
     height: auto;
     width: auto;
     display: flex;
-    font-family: 'Times New Roman', Times, serif;
     justify-content: center;
     background-attachment: fixed;
 }
+
+.center {
+           align-items: center;
+            text-align: center;
+            margin: 0 auto;
+        }
 
 /* Style Section for Website Explanation (Travs) */
 .explainSection { 
@@ -21,12 +47,11 @@ body {
     align-items: center;
     width: auto;
     background-color: rgba(202, 116, 59, 0.8);
-    border: 4px solid black;
-    height: 150px;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
     margin-top: 5vh;
     margin-bottom: 5vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .firstPage {
@@ -158,36 +183,6 @@ body {
     /* Reverse the order of boxes for the right column (Page 3 & 4) */
     flex-direction: row-reverse;
 }
-
-.center {
-           align-items: center;
-            text-align: center;
-            margin: 0 auto;
-        }
-     
-header {
-    background-color: rgba(190, 126, 30, 0.849); 
-    border: 4px solid black;
-    width: auto;
-    height: 110px;
-    padding: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    display: flex;              /* Use flexbox for easy alignment */
-    justify-content: space-between; /* Space between text and image */
-    align-items: center;        /* Vertically center items */
-}  
-
-
-    /* Style the image */
-header img {
-    width: 120px;   /* Change width */
-    height: auto;   /* Keep aspect ratio */
-    object-fit: contain; /* Prevent distortion */
-}
-
-
 h1 {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
@@ -235,11 +230,23 @@ footer {
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
 }
 
-
-
 .caption {
     text-align: center;
     font-style: italic;
     font-size: 10px;
     margin-top: auto;
+}
+
+.visitButton {
+    background-color: #975824; /* Brown background */
+    border: none;             /* Remove default border */
+    padding: 15px 32px;       /* Space inside the button */
+    text-align: center;       /* Center the text */
+    text-decoration: none;    /* Remove underline (if using <a> tag) */
+    display: inline-block;    /* Allows padding/margin/width to work well */
+    font-size: 20px;          /* Increase font size */
+    cursor: pointer;          /* Change mouse cursor to a hand */
+    border-radius: 10px;       /* Rounded corners */
+    transition-duration: 0.5s; /* Smooth transition for hover effects */
+    margin: 40px;
 }
