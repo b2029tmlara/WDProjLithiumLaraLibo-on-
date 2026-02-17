@@ -64,7 +64,6 @@ body {
     background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 10px;
     width: 50%;
     margin: 0 auto 40px auto; /* Center horizontally, margin bottom for spacing */
 }
@@ -79,13 +78,12 @@ body {
     color: white;
     padding: 15px;
     border-bottom: 2px solid white;
+    letter-spacing: 2px;
 }
 
 .section-title-box h2 {
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    color: white;
 }
 
 .content-container {
@@ -98,11 +96,6 @@ body {
     border-bottom: 1px dashed black;
     padding-bottom: 20px;
 }
-
-.history-block:last-child {
-    border-bottom: none;
-}
-
 .history-content-layout {
     display: flex;
     justify-content: space-between;
@@ -371,6 +364,9 @@ nav a:hover {
     text-align: center;      /* fixes float alignment */
     overflow: hidden;
 }
+.majorChordsSection h3 {
+    margin: 10px;
+}
 .minorChordsSection { 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(197,197,197);
@@ -384,6 +380,9 @@ nav a:hover {
     text-align: center;      /* fixes float alignment */
     overflow: hidden;
 }
+.minorChordsSection h3 {
+    margin: 10px;
+}
 
 .row1 {
     display: flex;               /* put children in a row */
@@ -391,6 +390,7 @@ nav a:hover {
     align-items: flex-start;     /* align headings/images at the top */
     gap: 20px;                   /* optional spacing between items */
     flex-wrap: wrap;             /* allows wrapping on smaller screens */
+    margin: 10px;
 }
 
 .row1 > div {
@@ -413,6 +413,7 @@ nav a:hover {
     align-items: flex-start;     /* align headings/images at the top */
     gap: 20px;                   /* optional spacing between items */
     flex-wrap: wrap;             /* allows wrapping on smaller screens */
+    margin: 10px;
 }
 
 .row2 > div {
@@ -434,6 +435,7 @@ nav a:hover {
     align-items: flex-start;     /* align headings/images at the top */
     gap: 20px;                   /* optional spacing between items */
     flex-wrap: wrap;             /* allows wrapping on smaller screens */
+    margin: 10px;
 }
 
 .row3 > div {
@@ -455,6 +457,7 @@ nav a:hover {
     align-items: flex-start;     /* align headings/images at the top */
     gap: 20px;                   /* optional spacing between items */
     flex-wrap: wrap;             /* allows wrapping on smaller screens */
+    margin: 10px;
 }
 
 .row4 > div {
@@ -638,23 +641,6 @@ nav a:hover {
     background-color: rgba(202, 116, 59, 0.856);
     border-radius: 10px;
 }
-
-.historySection { 
-    border-radius: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    box-shadow: 0 0 10px rgba(197,197,197);
-    text-align: center;
-    background-color: rgba(202, 116, 59, 0.8);
-    border: 4px solid black;
-    height: auto; 
-    margin-right: 15vw;
-    margin-left: 15vw;
-    margin-bottom: 5vw;
-    overflow: hidden;
-} 
 
 /* Forms */
 form {
