@@ -57,7 +57,9 @@ body {
     box-sizing: border-box;    
     text-align: center;      /* fixes float alignment */
     overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 } 
+
 
 /* The black "History" header block */
 .history-header-block {
@@ -79,6 +81,7 @@ body {
     padding: 15px;
     border-bottom: 2px solid white;
     letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .section-title-box h2 {
@@ -89,6 +92,7 @@ body {
 .content-container {
     padding: 25px;
     text-align: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .history-block {
@@ -218,6 +222,7 @@ body {
     margin-left: 15vw;
     margin-bottom: 5vw;
     overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 } 
 
 .explanSection2 { 
@@ -363,6 +368,7 @@ nav a:hover {
     box-sizing: border-box;    
     text-align: center;      /* fixes float alignment */
     overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .majorChordsSection h3 {
     margin: 10px;
@@ -379,6 +385,7 @@ nav a:hover {
     box-sizing: border-box;    
     text-align: center;      /* fixes float alignment */
     overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .minorChordsSection h3 {
     margin: 10px;
