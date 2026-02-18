@@ -19,9 +19,6 @@
         
         <fieldset>
             <legend>Personal Identification</legend>
-            <label>Student ID:
-                <input type="number" name="studentID" required onblur="checkEmpty(this)">
-            </label>
             <label>Full Name:
                 <input type="text" name="fullName" required onblur="checkEmpty(this)">
             </label>
@@ -34,40 +31,63 @@
         </fieldset>
 
         <fieldset>
-            <legend> Piano Practice Details </legend>
-            <label>Mobile Phone:
-                <input type="text" name="phone" required onblur="checkEmpty(this)">
-            </label>
-            
-            <label> Grade Level:
-                <select name="gradeLevel" required>
+            <legend> Piano Capabilities</legend>
+
+            <label> Skill Level:
+                <select name="skillLevel" required>
                     <option value="">--Select Level--</option>
-                    <option value="LVL_07">Grade 7</option>
-                    <option value="LVL_08">Grade 8</option>
-                    <option value="LVL_09">Grade 9</option>
-                    <option value="LVL_10">Grade 10</option>
-                    <option value="LVL_11">Grade 11</option>
-                    <option value="LVL_12">Grade 12</option>
+                    <option value="BEGINNER">Beginner</option>
+                    <option value="INTERMEDIATE">Intermediate</option>
+                    <option value="ADVANCED">Advanced</option>
                 </select>
             </label>
 
-            <label class="radio-group">Status:
-                <br>
-                <input type="radio" name="status" value="INT" required> Intern
-                <input type="radio" name="status" value="EXT" required> Extern
+            <label> Preffered Genre:
+                 <select name="genre" required>
+                    <option value="">--Select a Genre--</option>
+                    <option value="CLASSICAL">Classical</option>
+                    <option value="JAZZ">Jazz</option>
+                    <option value="POP">Pop</option>
+                    <option value="ROCK">Rock</option>
+                    <option value="COUNTRY">Country</option>
             </label>
 
-            <label> Preferred Musical Genre:
-                <select name="club" required>
-                    <option value="">--Select a Club--</option>
-                    <option value="CODE_SOC">Coding Society</option>
-                    <option value="DEB_UN">Debate Union</option>
-                    <option value="ART_G">Artistic Guild</option>
-                    <option value="ECO_W">Eco Warriors</option>
-                    <option value="MUS_ENS">Music Ensemble</option>
-                </select>
+                <label for="practice-time" class="slider-container">Practice Time:
+                    <input type="range" id="practice-time" min="0.5" max="8" step="0.5" value="4" required>
+                    <div class="slider-labels">
+                    <span>0.5</span>
+                    <span>1</span>
+                    <span>1.5</span>
+                    <span>2</span>
+                    <span>2.5</span>
+                    <span>3</span>
+                    <span>3.5</span>
+                    <span>4</span>
+                    <span>4.5</span>
+                    <span>5</span>
+                    <span>5.5</span>
+                    <span>6</span>
+                    <span>6.5</span>
+                    <span>7</span>
+                    <span>7.5</span>
+                    <span>8</span>
+                    </div>
+                </div>
+                </label>
+            
+            <label> Available Practice Days:
+                <input type="checkbox" name="sunday" value="sunday"> Sunday
+                <input type="checkbox" name="monday" value="monday"> Monday
+                <input type="checkbox" name="tuesday" value="tuesday"> Tuesday
+                <input type="checkbox" name="wednesday" value="wednesday"> Wednesday
+                <input type="checkbox" name="thursday" value="thursday"> Thursday
+                <input type="checkbox" name="friday" value="friday"> Friday
+                <input type="checkbox" name="saturday" value="saturday"> Saturday
             </label>
 
+            <label> Main Goal:
+                <textarea name="mainGoal" required onblur="checkEmpty(this)"></textarea>
+            </label>
         </fieldset>
 
         <div class="button-group">
@@ -76,25 +96,6 @@
             <button type="button"><a href="../index.html"> Home </a></button>
         </div>
     </form>
-    
-    <script>
-        // Event handler for submit and reset confirmations
-        function confirmAction(type) {
-            const message = type === 'submit' 
-                ? "Are you sure you want to submit your application?" 
-                : "Are you sure you want to clear all entered information?";
-            return confirm(message);
-        }
-
-        // Event handler for onblur validation
-        function checkEmpty(element) {
-            if (element.value.trim() === "") {
-                element.classList.add("input-error");
-            } else {
-                element.classList.remove("input-error");
-            }
-        }
-    </script>
 
 </body>
 </html>

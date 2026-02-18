@@ -97,3 +97,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+ // Event handler for submit and reset confirmations
+        function confirmAction(type) {
+            const message = type === 'submit' 
+                ? "Are you sure you want to submit your application?" 
+                : "Are you sure you want to clear all entered information?";
+            return confirm(message);
+        }
+
+        // Event handler for onblur validation
+        function checkEmpty(element) {
+            if (element.value.trim() === "") {
+                element.classList.add("input-error");
+            } else {
+                element.classList.remove("input-error");
+            }
+        }

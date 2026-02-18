@@ -717,5 +717,16 @@ input[type="reset"] {
 }
 .homeButton {
    text-align: center;
-   margin: center;
+   margin: 20px auto;
+}
+
+.slider-container {
+  width: 400px;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 5px;
 }
