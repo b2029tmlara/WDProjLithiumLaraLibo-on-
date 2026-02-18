@@ -480,7 +480,9 @@ nav a:hover {
     display: block;
     margin: 0 auto;              /* center image */
 }
-
+.cMAJOR {
+    
+}
 .cMAJOR:hover {
     transform: scale(1.05);
     transition: transform 0.3s;
