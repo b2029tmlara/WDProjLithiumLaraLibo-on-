@@ -9,7 +9,7 @@ chords.forEach(chord => {
 
         if (!soundFile) return;
 
-        const audio = new Audio(`../assets/${soundFile}.mp3`);
+        const audio = new Audio(`../audio-files/${soundFile}.mp3`);
         audio.currentTime = 0; // allows rapid clicking
         audio.play();
     });
