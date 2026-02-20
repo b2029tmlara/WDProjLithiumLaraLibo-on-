@@ -113,3 +113,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 element.classList.remove("input-error");
             }
         }
+
+// Saving form data
+function saveFormData(event) {
+    event.preventDefault(); // prevent default form submission
+
+    // Run confirmation first
+    if (!confirmAction('submit')) {
+        return; // stop if user clicks Cancel
+    }
+
+    const formData = {
+        fullName: document.getElementById("full-Name").value,
+        birthday: document.getElementById("bDay").value,
+        email: document.getElementById("eMail").value,
+        skillLevel: document.getElementById("skill-Level").value,
+        genre: document.getElementById("musicGenre").value,
+        practiceTime: document.getElementById("practice-time").value,
+        goal: document.getElementById("musicGoal").value,
+        practiceDays: []
+    };
+
+    // Get checked days
+    const checkboxes = document.querySelectorAll(".checkbox-group input[type='checkbox']");
+    checkboxes.forEach(box => {
+        if (box.checked) {
+            formData.practiceDays.push(box.id);
+        }
+    });
+
+    // Store in localStorage
+    localStorage.setItem("pianoUserData", JSON.stringify(formData));
+
+    alert("Information saved successfully!");
+    window.location.href = "../index.html";
+
+}

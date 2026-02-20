@@ -278,3 +278,44 @@ footer {
     background-color: rgb(221, 174, 102);
     transform: scale(1.1);
 }
+
+.containerPPP {
+    /* Create a 2x2 grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-rows: auto auto; /* Two rows */
+    gap: 100px; /* Space between the four units */
+    max-width: 1000px; /* Optional: Sets max width for the whole layout */
+    margin: auto; /* Center the grid on the page */
+}
+
+.sixthPage {
+    /* Use Flexbox to align the black and empty boxes horizontally */
+    display: flex;
+    align-items: center;
+    align-content: center;
+    height: 300px; /* Defines the height of the row/unit */
+    width: 100%;
+    clear: both; 
+    background-color: rgb(180, 126, 45);
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 25px; 
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(197,197,197);
+}
+
+.seventhPage {
+    /* Use Flexbox to align the black and empty boxes horizontally */
+    display: flex;
+    align-items: center;
+    height: 300px; /* Defines the height of the row/unit */
+    width: 100%;
+    clear: both; 
+    background-color: rgb(180, 126, 45);
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 25px; 
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(197,197,197);
+}
