@@ -7,14 +7,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const signUpSection = document.querySelector('a.visitButton').parentElement;
 
-    const newContainer = document.createElement('div');
-    newContainer.id = 'ppp-links-container';
-    newContainer.classList.add('index-container');
+// Avoid adding multiple containers
+if (!document.querySelector('.dynamic-container')) {
 
-    newContainer.innerHTML = `
-        <div class="section-title-box">
-            <h2> YOUR PERSONAL PRACTICE PAGES </h2>
-        </div>
+    const dynamicContainer = document.createElement('div');
+    dynamicContainer.classList.add('dynamic-container'); // NEW class, not index-container
+
+    dynamicContainer.innerHTML = `
         <div class="explainSection">
             <p style="font-size: 20px;">
                 Congratulations, ${data.fullName}! Your Piano Practice Plan pages are ready. 
@@ -51,5 +50,6 @@ window.addEventListener('DOMContentLoaded', () => {
         </div>
     `;
 
-    signUpSection.appendChild(newContainer);
+    signUpSection.appendChild(dynamicContainer);
+}
 });
