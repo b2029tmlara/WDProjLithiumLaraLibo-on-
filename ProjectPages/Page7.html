@@ -29,25 +29,35 @@
         practiceDays 
     } = data;
 
-    const iframe = document.getElementById("skill-video");
+    const iframe1 = document.getElementById("video-1");
+    const iframe2 = document.getElementById("video-2");
+    const iframe3 = document.getElementById("video-3");
+    const iframe4 = document.getElementById("video-4");
+    const iframe5 = document.getElementById("video-5");
+    const iframe6 = document.getElementById("video-6");
 
-    if (!iframe) return;
+    if (!iframe1 || !iframe2 || !iframe3 || !iframe4 || !iframe5 || !iframe6) return;
 
     if (skillLevel === "BEGINNER") {
-        iframe.src = "https://www.youtube.com/embed/4SXQ_wlbWog";
+        iframe1.src = "https://www.youtube.com/embed/4SXQ_wlbWog";
+        iframe2.src = "https://www.youtube.com/embed/4SXQ_wlbWog";
+        iframe3.src = "https://www.youtube.com/embed/4SXQ_wlbWog";
     } 
     else if (skillLevel === "INTERMEDIATE") {
-        iframe.src = "https://www.youtube.com/embed/312-_CUICv8";
+        iframe1.src = "https://www.youtube.com/embed/312-_CUICv8";
+        iframe2.src = "https://www.youtube.com/embed/312-_CUICv8";
+        iframe3.src = "https://www.youtube.com/embed/312-_CUICv8";
     } 
     else if (skillLevel === "ADVANCED") {
-        iframe.src = "https://www.youtube.com/embed/UWgQrKUxVNc";
+        iframe1.src = "https://www.youtube.com/embed/UWgQrKUxVNc";
+        iframe2.src = "https://www.youtube.com/embed/UWgQrKUxVNc";
+        iframe3.src = "https://www.youtube.com/embed/UWgQrKUxVNc";
     }
 
 });
 
 </script>
 
-</script>
 </head>
 
 <body>
@@ -66,16 +76,27 @@
         <h2>Resources</h2>
     </div>
 
-    <div class="pppSection">
+    
         <p>Below are a list of videos, images, and audio files that will help you on your piano journey!</p>
 
         <div class="resource-skillLevel">
-            <p> Videos Suited for your Skill level</p>
+            <p>Videos Suited for your Skill level</p>
             <div class="video-container">
-                <iframe width="560" height="315" id="skill-video" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe id="video-1" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe id="video-2" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe id="video-3" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
-    </div>
+
+         <div class="resource-skillLevel">
+            <p>Videos Suited for your Favorite Genre</p>
+            <div class="video-container">
+                <iframe id="video-4" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe id="video-5" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe id="video-6" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+
 </section>
 
 <footer> 

@@ -794,7 +794,13 @@ input[type="reset"]:hover {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.pppSection { 
+.intro-text {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.resource-skillLevel {
     border-radius: 10px;
     border: 3px solid black;
     padding: 25px; 
@@ -807,11 +813,18 @@ input[type="reset"]:hover {
     margin-right: 5vw;
     margin-top: 5vh;
     margin-bottom: 5vh;
+    font-size: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;              /* space between videos */
+    flex-wrap: wrap;        /* makes them stack on small screens */
+    margin-top: 20px;
+}
 
-.intro-text {
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+.video-container iframe {
+    max-width: 100%;
+    border-radius: 10px;
 }
