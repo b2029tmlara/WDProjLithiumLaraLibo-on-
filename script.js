@@ -36,18 +36,19 @@ if (!document.querySelector('.dynamic-container')) {
             </div>
 
             <div class="seventhPage">
-                <div class="black-box right-align">
-                    <p class="page-description"> SUPPLEMENTARY RESOURCES </p>
-                    <p>
-                        <button class="pageButton"><a href="./ProjectPages/Page7.html"> VISIT </a></button>
-                    </p>
-                </div>
                 <div class="empty-box">
                     <img src="./assets/Page7cover.jpg" alt="Supplementary Resources" class="right-image">
                     <p class="caption">Recommended Resources & Songs</p>
                 </div>
+                <div class="black-box right-align">
+                    <p class="page-description"> RESOURCES </p>
+                    <p>
+                        <button class="pageButton"><a href="./ProjectPages/Page7.html"> VISIT </a></button>
+                    </p>
+                </div>
             </div>
         </div>
+    </div>
     `;
 
     signUpSection.appendChild(dynamicContainer);

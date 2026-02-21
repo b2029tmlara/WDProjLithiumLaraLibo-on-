@@ -778,3 +778,40 @@ input[type="reset"]:hover {
     flex-direction: column;
     margin-bottom: 15px;
 }
+
+.pianoPlan {
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(197,197,197);
+    text-align: center;
+    background-color: rgba(202, 116, 59, 0.8);
+    border: 4px solid black;
+    height: auto; 
+    margin-right: 15vw;
+    margin-left: 15vw;
+    margin-bottom: 5vw;
+    overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.pppSection { 
+    border-radius: 10px;
+    border: 3px solid black;
+    padding: 25px; 
+    box-shadow: 0 0 10px rgba(197,197,197);
+    text-align: center;
+    align-items: center;
+    width: auto;
+    background-color: rgba(202, 122, 69, 0.911);
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.intro-text {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
