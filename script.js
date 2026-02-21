@@ -23,27 +23,19 @@ if (!document.querySelector('.dynamic-container')) {
 
         <div class="containerPPP">
             <div class="sixthPage">
-                <div class="black-box">
-                    <p class="page-description"> PRACTICE PLAN </p>
+                <div class="ppp-box">
+                    <p class="ppppage-description"> PRACTICE PLAN </p>
                     <p>
-                        <button class="pageButton"><a href="./ProjectPages/Page6.html"> VISIT </a></button>
+                        <button class="ppppageButton"><a href="./ProjectPages/Page6.html"> VISIT </a></button>
                     </p>
-                </div>
-                <div class="empty-box">
-                    <img src="./assets/Page6cover.jpg" alt="Practice Plan" class="right-image">
-                    <p class="caption">Your Personalized Practice Plan</p>
                 </div>
             </div>
 
             <div class="seventhPage">
-                <div class="empty-box">
-                    <img src="./assets/Page7cover.jpg" alt="Supplementary Resources" class="right-image">
-                    <p class="caption">Recommended Resources & Songs</p>
-                </div>
-                <div class="black-box right-align">
-                    <p class="page-description"> RESOURCES </p>
+                <div class="ppp-box">
+                    <p class="ppppage-description"> RESOURCES </p>
                     <p>
-                        <button class="pageButton"><a href="./ProjectPages/Page7.html"> VISIT </a></button>
+                        <a class="ppppageButton" href="./ProjectPages/Page7.html"> VISIT </a>
                     </p>
                 </div>
             </div>
