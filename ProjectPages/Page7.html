@@ -35,25 +35,100 @@
     const iframe4 = document.getElementById("video-4");
     const iframe5 = document.getElementById("video-5");
     const iframe6 = document.getElementById("video-6");
+    const iframe7 = document.getElementById("video-7");
+    const iframe8 = document.getElementById("video-8");
+    const iframe9 = document.getElementById("video-9");
+    const song1 = document.getElementById("song-1");
+    const song2 = document.getElementById("song-2");
+    const song3 = document.getElementById("song-3");
 
-    if (!iframe1 || !iframe2 || !iframe3 || !iframe4 || !iframe5 || !iframe6) return;
+    if (!iframe1 || !iframe2 || !iframe3 || !iframe4 || !iframe5 || !iframe6 || !iframe7 || !iframe8 || !iframe9 || !song1 || !song2 || !song3) return;
 
     if (skillLevel === "BEGINNER") {
         iframe1.src = "https://www.youtube.com/embed/4SXQ_wlbWog";
-        iframe2.src = "https://www.youtube.com/embed/4SXQ_wlbWog";
-        iframe3.src = "https://www.youtube.com/embed/4SXQ_wlbWog";
+        iframe2.src = "https://www.youtube.com/embed/a_kVafB-0C4";
+        iframe3.src = "https://www.youtube.com/embed/tEtukfFv3Wk";
     } 
     else if (skillLevel === "INTERMEDIATE") {
         iframe1.src = "https://www.youtube.com/embed/312-_CUICv8";
-        iframe2.src = "https://www.youtube.com/embed/312-_CUICv8";
-        iframe3.src = "https://www.youtube.com/embed/312-_CUICv8";
+        iframe2.src = "https://www.youtube.com/embed/xbTZ52bhYXM";
+        iframe3.src = "https://www.youtube.com/embed/rto4hOS105A";
     } 
     else if (skillLevel === "ADVANCED") {
-        iframe1.src = "https://www.youtube.com/embed/UWgQrKUxVNc";
+        iframe1.src = "https://www.youtube.com/embed/qzEChIA_DJ0";
         iframe2.src = "https://www.youtube.com/embed/UWgQrKUxVNc";
-        iframe3.src = "https://www.youtube.com/embed/UWgQrKUxVNc";
+        iframe3.src = "https://www.youtube.com/embed/Wh1BN3dif98";
     }
 
+
+    if (genre === "CLASSICAL") {
+        iframe4.src = "https://www.youtube.com/embed/v11OJNEdIn8";
+        iframe5.src = "https://www.youtube.com/embed/TwRvyyrIPM";
+        iframe6.src = "https://www.youtube.com/embed/ESrNzuObudY";
+        song1.src = "https://www.youtube.com/embed/aw37rJfaAt0";
+        song2.src = "https://www.youtube.com/embed/xAwKsp10lRs";
+        song3.src = "https://www.youtube.com/embed/AWkmg3Zq8vY";
+
+    } 
+    else if (genre === "JAZZ") {
+        iframe4.src = "https://www.youtube.com/embed/mBJ9T8FVr80";
+        iframe5.src = "https://www.youtube.com/embed/NB4MoWjW-Tw";
+        iframe6.src = "https://www.youtube.com/embed/G_8R4SRvfao";
+        song1.src = "https://www.youtube.com/embed/EKVghHyOiRE";
+        song2.src = "https://www.youtube.com/embed/DNfebTjn70w";
+        song3.src = "https://www.youtube.com/embed/6u-hSwzhSO4";
+        
+    } 
+    else if (genre === "POP") {
+        iframe4.src = "https://www.youtube.com/embed/8DuObSomgRk";
+        iframe5.src = "https://www.youtube.com/embed/NYydGXANHJM";
+        iframe6.src = "https://www.youtube.com/embed/5yJCM0nheL0";
+        song1.src = "https://www.youtube.com/embed/TX-RsNGzAEU";
+        song2.src = "https://www.youtube.com/embed/MsmqSPoOXko";
+        song3.src = "https://www.youtube.com/embed/EEUv8fP7YtI";
+    } 
+    else if (genre === "ROCK") {
+        iframe4.src = "https://www.youtube.com/embed/7mMQQDcVEDM";
+        iframe5.src = "https://www.youtube.com/embed/i4i7U9C1Rc8";
+        iframe6.src = "https://www.youtube.com/embed/shfkj1BKPS4";
+        song1.src = "https://www.youtube.com/embed/lpVBnF1F0G0";
+        song2.src = "https://www.youtube.com/embed/zwMl5oYr_hg";
+        song3.src = "https://www.youtube.com/embed/UIkXVTC4gFI";
+    } 
+    else if (genre === "COUNTRY") {
+        iframe4.src = "https://www.youtube.com/embed/yLW2gmL51-0";
+        iframe5.src = "https://www.youtube.com/embed/BSQ91jitL1c";
+        iframe6.src = "https://www.youtube.com/embed/tT-59hLd8a0";
+        song1.src = "https://www.youtube.com/embed/ad7Mkp878HQ";
+        song2.src = "https://www.youtube.com/embed/vb5MJi7LdXk";
+        song3.src = "https://www.youtube.com/embed/143V_PsLP2Q";
+    }
+
+    if (goal === "fingers") {
+        iframe7.src = "https://www.youtube.com/embed/Wh1BN3dif98";
+        iframe8.src = "https://www.youtube.com/embed/U4mU0uu-0Aw";
+        iframe9.src = "https://www.youtube.com/embed/5cJcLkCBrKU";
+    } 
+    else if (goal === "learning") {
+        iframe7.src = "https://www.youtube.com/embed/hO6dDi55TYY&t=3s";
+        iframe8.src = "https://www.youtube.com/embed/cxnAG8aXe5o";
+        iframe9.src = "https://www.youtube.com/embed/EOs5YLcq2uE";
+    } 
+    else if (goal === "sight") {
+        iframe7.src = "https://www.youtube.com/embed/mysy4D23RfU";
+        iframe8.src = "https://www.youtube.com/embed/QrijYLUPVLc";
+        iframe9.src = "https://www.youtube.com/embed/qcFrqFAt2nY";
+    }
+    else if (goal === "music-theory") {
+        iframe7.src = "https://www.youtube.com/embed/GRxofEmo3HA";
+        iframe8.src = "https://www.youtube.com/embed/GRxofEmo3HA";
+        iframe9.src = "https://www.youtube.com/embed/GRxofEmo3HA";
+    }
+    else if (goal === "timing") {
+        iframe7.src = "https://www.youtube.com/embed/8jKqQXyYp9s";
+        iframe8.src = "https://www.youtube.com/embed/8jKqQXyYp9s";
+        iframe9.src = "https://www.youtube.com/embed/8jKqQXyYp9s";
+    }
 });
 
 </script>
@@ -76,10 +151,9 @@
         <h2>Resources</h2>
     </div>
 
-    
-        <p>Below are a list of videos, images, and audio files that will help you on your piano journey!</p>
+        <p class="resources-title">Below are a list of videos, images, and audio files that will help you on your piano journey!</p>
 
-        <div class="resource-skillLevel">
+        <div class="resources">
             <p>Videos Suited for your Skill level</p>
             <div class="video-container">
                 <iframe id="video-1" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -88,13 +162,26 @@
             </div>
         </div>
 
-         <div class="resource-skillLevel">
-            <p>Videos Suited for your Favorite Genre</p>
+         <div class="resources">
+            <p>Videos and Songs Suited for your Favorite Genre</p>
             <div class="video-container">
                 <iframe id="video-4" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <iframe id="video-5" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <iframe id="video-6" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
+            <div class="song-container">
+                <iframe id="song-1" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe id="song-2" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe id="song-3" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="resources">
+            <p>Videos Suited for your Goal</p>
+            <div class="video-container">
+                <iframe id="video-7" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe id="video-8" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe id="video-9" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
 </section>
