@@ -26,7 +26,8 @@
         skillLevel, 
         genre, 
         practiceTime, 
-        practiceDays 
+        practiceDays,
+        goal 
     } = data;
 
     const iframe1 = document.getElementById("video-1");
@@ -120,14 +121,19 @@
         iframe9.src = "https://www.youtube.com/embed/qcFrqFAt2nY";
     }
     else if (goal === "music-theory") {
-        iframe7.src = "https://www.youtube.com/embed/GRxofEmo3HA";
-        iframe8.src = "https://www.youtube.com/embed/GRxofEmo3HA";
-        iframe9.src = "https://www.youtube.com/embed/GRxofEmo3HA";
+        iframe7.src = "https://www.youtube.com/embed/6CFP9DF706s";
+        iframe8.src = "https://www.youtube.com/embed/2RCOcEu-xLQ";
+        iframe9.src = "https://www.youtube.com/embed/OtBqDgOsW1c";
     }
     else if (goal === "timing") {
-        iframe7.src = "https://www.youtube.com/embed/8jKqQXyYp9s";
-        iframe8.src = "https://www.youtube.com/embed/8jKqQXyYp9s";
-        iframe9.src = "https://www.youtube.com/embed/8jKqQXyYp9s";
+        iframe7.src = "https://www.youtube.com/embed/KKNaT-XYKmw";
+        iframe8.src = "https://www.youtube.com/embed/GHwwINzaWt8";
+        iframe9.src = "https://www.youtube.com/embed/z_qFkd4Li_M";
+    }
+    else if (goal === "note-recog") {
+        iframe7.src = "https://www.youtube.com/embed/Wzqa44N-sIU";
+        iframe8.src = "https://www.youtube.com/embed/DDuIYk1Zo8I";
+        iframe9.src = "https://www.youtube.com/embed/nl01K-yCSY8";
     }
 });
 
