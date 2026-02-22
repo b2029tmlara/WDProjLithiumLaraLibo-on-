@@ -12,7 +12,47 @@
     
     <meta charset="UTF-8">
     <title> Personal Head </title>
+
+    <script> 
+    
+        
+/** This is the JS logic for redirecting users based on piano skill level **/
+        
+function handleSkillRedirect() {
+    // 1. EXTRACT: Grab the specific value from the form
+    const inputElement = document.getElementById('skill-level');
+    const selectedLevel = inputElement.value;
+
+    console.log("Input Received:", selectedLevel); // Debugging line, documentation
+
+    // 2. LOGIC: Determine the destination based on the input
+    let destinationUrl = "";
+
+    if (selectedLevel === "beginner") {
+        // Logic for the Beginner path
+        destinationUrl = "./ProjectPages/Page6.html";
+        
+    } else if (selectedLevel === "intermediate") {
+        // Logic for the Intermediate path
+        destinationUrl = "./ProjectPages/Page8.html";
+        
+    } else if (selectedLevel === "advanced") {
+        // Logic for the Advanced path
+        destinationUrl = "./ProjectPages/Page9.html";
+        
+    } else {
+        // Logic for unexpected or empty input
+        alert("Please select a valid skill level to continue.");
+        return; 
+    }
+
+    // 3. ACTION: Execute the redirection
+    console.log("Redirecting to:", destinationUrl);
+    window.location.href = destinationUrl;
+}
+    </script>
 </head>
+    
 <body>
 
     <form onsubmit="saveFormData(event)" onreset="return confirmAction('reset')">
@@ -33,6 +73,8 @@
         <fieldset>
             <legend> Piano Capabilities</legend>
 
+    <!-- ID skill level is used in the JS program for redirection, we focus on this -->
+        
             <label> Skill Level:
                 <select name="skillLevel" id="skill-Level" required>
                     <option value="">--Select Level--</option>
@@ -102,7 +144,7 @@
         </fieldset>
 
         <div class="button-group">
-            <input type="submit" value="Submit Information">
+            <input type="submit" onkeyup="handleSkillRedirect()" value="Submit Information">
             <input type="reset" value="Reset Form">
             <a href="../index.html" class="home-btn">Home</a>
         </div>
