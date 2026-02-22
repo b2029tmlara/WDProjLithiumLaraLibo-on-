@@ -116,11 +116,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Saving form data
 function saveFormData(event) {
-    event.preventDefault(); // prevent default form submission
+    event.preventDefault();
 
-    // Run confirmation first
     if (!confirmAction('submit')) {
-        return; // stop if user clicks Cancel
+        return;
+    }
+
+    const checkboxes = document.querySelectorAll(".checkbox-group input[type='checkbox']");
+    let atLeastOneChecked = false;
+
+    checkboxes.forEach(box => {
+        if (box.checked) {
+            atLeastOneChecked = true;
+        }
+    });
+
+    // ❌ If none selected, stop submission
+    if (!atLeastOneChecked) {
+        alert("Please select at least one available practice day.");
+        return;
     }
 
     const formData = {
@@ -134,20 +148,16 @@ function saveFormData(event) {
         practiceDays: []
     };
 
-    // Get checked days
-    const checkboxes = document.querySelectorAll(".checkbox-group input[type='checkbox']");
     checkboxes.forEach(box => {
         if (box.checked) {
             formData.practiceDays.push(box.id);
         }
     });
 
-    // Store in localStorage
     localStorage.setItem("pianoUserData", JSON.stringify(formData));
 
     alert("Information saved successfully!");
     window.location.href = "../index.html";
-
 }
 
 /** This is the JS logic for redirecting users based on piano skill level **/
