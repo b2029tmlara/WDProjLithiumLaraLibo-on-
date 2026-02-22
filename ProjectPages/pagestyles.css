@@ -850,3 +850,198 @@ input[type="reset"]:hover {
     max-width: 100%;
     border-radius: 10px;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    /* Make header stack nicely */
+    header {
+        flex-direction: column;
+        text-align: center;
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+
+    header img {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+
+    /* Navigation stacked vertically */
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Reduce large margins on sections */
+    .historySection,
+    .majorChordsSection,
+    .minorChordsSection,
+    .explanSection,
+    .pianoPlan {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    /* Stack column layout vertically */
+    .history-content-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    /* Make piano responsive */
+    #piano-container {
+        width: 100%;
+        height: 200px;
+        overflow-x: auto;
+    }
+
+    /* Rows stack vertically */
+    .row1,
+    .row2,
+    .row3,
+    .row4 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row1 > div,
+    .row2 > div,
+    .row3 > div,
+    .row4 > div {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Images scale properly */
+    .row1 img,
+    .row2 img,
+    .row3 img,
+    .row4 img {
+        width: 150px;
+    }
+
+    /* Form adjustments */
+    form {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    legend {
+        font-size: 22px;
+    }
+
+    /* Footer stacks vertically */
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-col {
+        text-align: center !important;
+        border: none;
+    }
+
+}
+
+/* Further adjustments for small screens */
+@media (max-width: 600px) {
+
+    /* Header tighter spacing */
+    header {
+        padding: 10px;
+    }
+
+    header img {
+        width: 60px;
+    }
+
+    /* Smaller navigation buttons */
+    nav a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    /* Reduce section margins more */
+    .historySection,
+    .majorChordsSection,
+    .minorChordsSection,
+    .explanSection,
+    .pianoPlan,
+    .resources {
+        margin-left: 3vw;
+        margin-right: 3vw;
+        padding: 15px;
+    }
+
+    /* Piano scroll horizontally if needed */
+    #piano-container {
+        height: 160px;
+        overflow-x: auto;
+    }
+
+    /* Make chord images smaller */
+    .row1 img,
+    .row2 img,
+    .row3 img,
+    .row4 img {
+        width: 120px;
+    }
+
+    /* Stack floated description boxes */
+    .description-box-page2-1,
+    .description-box-page2-2 {
+        float: none;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Forms tighter */
+    form {
+        padding: 15px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    legend {
+        font-size: 18px;
+    }
+
+    input, select, textarea {
+        font-size: 14px;
+    }
+
+    /* Smaller intro text */
+    .intro-text {
+        font-size: 16px;
+    }
+
+    /* Footer tighter */
+    footer {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .footer-col {
+        font-size: 0.8em;
+    }
+
+}
