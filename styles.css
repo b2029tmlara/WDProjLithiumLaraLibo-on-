@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 header {
     background-color: rgba(190, 126, 30, 0.849); 
     border: 4px solid black;
@@ -41,13 +45,11 @@ body {
     border: 4px solid black;
     height: auto; 
     width: 80%;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin: 5vh auto; 
     overflow: hidden;
     align-items: center;
     display: block;
+    flex-direction: column;
 }
 
 .section-title-box {
@@ -141,8 +143,9 @@ body {
     grid-template-columns: 1fr 1fr; /* Two equal columns */
     grid-template-rows: auto auto; /* Two rows */
     gap: 100px; /* Space between the four units */
-    max-width: 1000px; /* Optional: Sets max width for the whole layout */
-    margin: auto; /* Center the grid on the page */
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1000px;
 }
 
 /* Styling for the Black Blocks */
@@ -161,7 +164,7 @@ body {
     box-sizing: border-box;
 }
 
-.black-box right-align{
+.black-box.right-align{
     /* Adjust text alignment for black boxes on the right side */
     align-items: flex-end;
     text-align: right;
@@ -284,18 +287,19 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two equal columns */
     grid-template-rows: auto auto; /* Two rows */
-    gap: 100px; /* Space between the four units */
-    max-width: 1000px; /* Optional: Sets max width for the whole layout */
-    margin: auto; /* Center the grid on the page */
+    gap: 5%; /* Space between the four units */
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1000px;
 }
 
 .sixthPage {
-    /* Use Flexbox to align the black and empty boxes horizontally */
+    /* Use Flexbox to align the blacks and empty boxes horizontally */
     display: flex;
     align-items: center;
     align-content: center;
-    height: 200px; /* Defines the height of the row/unit */
-    width: 100%;
+    height: 80%; /* Defines the height of the row/unit */
+    width: 90%;
     clear: both; 
     background-color: rgb(180, 126, 45);
     border: 3px solid black;
@@ -309,8 +313,8 @@ footer {
     /* Use Flexbox to align the black and empty boxes horizontally */
     display: flex;
     align-items: center;
-    height: 200px; /* Defines the height of the row/unit */
-    width: 100%;
+    height: 80%; /* Defines the height of the row/unit */
+    width: 90%;
     clear: both; 
     background-color: rgb(180, 126, 45);
     border: 3px solid black;
@@ -335,7 +339,7 @@ footer {
 }
 
 .ppppage-description {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     color: rgb(0, 0, 0);
     margin:auto;
