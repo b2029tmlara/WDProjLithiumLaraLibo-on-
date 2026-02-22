@@ -8,37 +8,79 @@
     <title>88 Keys</title>
     <link rel="icon" href="../assets/pianologo.jpg" sizes="20x20" type="image/jng">
     <link rel="stylesheet" href="pagestyles.css">
-    <script src="script.js" defer></script>
     
-    <meta charset="UTF-8">
-    <title> Personal Head </title>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            // 1. DATA EXTRACTION
+            const data = JSON.parse(localStorage.getItem("pianoUserData"));
+            if (!data) return; // Nothing to show if localStorage is empty
 
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-    const data = JSON.parse(localStorage.getItem("pianoUserData"));
-    if (!data) return; // nothing to show
+            const { fullName, skillLevel, genre, practiceTime, goal } = data;
 
-    const { fullName, birthday, email, skillLevel, genre, practiceTime, practiceDays} = data;
-        document.getElementById("fullName").textContent = fullName;
-        document.getElementById("birthday").textContent = birthday;
-        document.getElementById("email").textContent = email;
-        document.getElementById("skillLevel").textContent = skillLevel;
-        document.getElementById("genre").textContent = genre;
-        document.getElementById("practiceTime").textContent = practiceTime;
-        document.getElementById("practiceDays").textContent = practiceDays;
-    })
+            // 2. BASIC UI UPDATES
+            document.getElementById("fullName").textContent = fullName || "Pianist";
+            document.getElementById("skillLevel").textContent = skillLevel || "Student";
+            document.getElementById("genre").textContent = genre || "Music";
+            document.getElementById("practiceTime").textContent = practiceTime || "0";
+            document.getElementById("goal").textContent = (goal || "improvement").replace("-", " ");
 
-</script>
+            // 3. LOGIC FOR LEVEL EXPLANATION
+            const explanLevel = document.getElementById("explanLevel");
+            const lvl = skillLevel ? skillLevel.toUpperCase() : "";
+            
+            if (lvl === "BEGINNER") {
+                explanLevel.textContent = "focus on developing proper hand arch, learning the 'thumb-tuck' technique for one-octave scales, and building basic hand independence through simple 5-finger patterns.";
+            } else if (lvl === "INTERMEDIATE") {
+                explanLevel.textContent = "prioritize two-octave major and minor scales, technical precision in arpeggios, and the use of syncopated pedaling to achieve a professional legato sound.";
+            } else if (lvl === "ADVANCED") {
+                explanLevel.textContent = "master four-octave scales in 3rds and 6ths, practice high-level finger independence through Bach fugues, and focus on weight-based tone production for expressive depth.";
+            }
+
+            // 4. LOGIC FOR GENRE EXPLANATION
+            const explanGenre = document.getElementById("explanGenre");
+            const gen = genre ? genre.toUpperCase() : "";
+
+            if (gen === "CLASSICAL") {
+                explanGenre.textContent = "focus on 'voicing' (bringing out the melody line over the accompaniment) and mastering specific historical articulations like Mozartian staccato.";
+            } else if (gen === "JAZZ") {
+                explanGenre.textContent = "dedicate your creative time to the II-V-I chord progression, practicing 'swung' eighth notes, and memorizing basic blues scales in C, F, and G.";
+            } else if (gen === "POP") {
+                explanGenre.textContent = "master the I-V-vi-IV chord loop in several keys and practice rhythmic LH patterns like 'octave-fifth' bass lines to support your melodies.";
+            } else if (gen === "ROCK") {
+                explanGenre.textContent = "work on driving rhythmic ostinatos, power chords, and energetic syncopation to keep the tempo moving.";
+            } else if (gen === "COUNTRY") {
+                explanGenre.textContent = "practice 'slip-note' techniques (grace notes) and steady alternating 'oom-pah' bass lines in the left hand.";
+            }
+
+            // 5. LOGIC FOR GOALS EXPLANATION
+            const explanGoal = document.getElementById("explanGoal");
+            const g = goal ? goal.toLowerCase() : "";
+
+            if (g === "fingers") {
+                explanGoal.textContent = "integrate 10 minutes of Hanon or Czerny velocity exercises to build the fast-twitch muscle fibers required for technical passages.";
+            } else if (g === "learning") {
+                explanGoal.textContent = "utilize 'chunking'—breaking the song into 2-measure segments and mastering them perfectly before moving on to the next.";
+            } else if (g === "sight") {
+                explanGoal.textContent = "spend a portion of your session reading music two levels below your difficulty, keeping your eyes strictly on the page without stopping for errors.";
+            } else if (g === "music-theory") {
+                explanGoal.textContent = "begin analyzing your current repertoire's key signatures and harmonic progressions using Roman Numeral analysis.";
+            } else if (g === "timing") {
+                explanGoal.textContent = "practice exclusively with a metronome at 50% of the target speed to ensure every eighth note is perfectly aligned with the beat.";
+            } else if (g === "note-recog") {
+                explanGoal.textContent = "drill interval recognition (3rds, 5ths, octaves) rather than individual notes to speed up your reading comprehension.";
+            }
+        });
+    </script>
 </head>
 
 <body>
 <header> 
-    <h1> 88 Keys: Your Piano Practice Plan</h1>
+    <h1>88 Keys: Your Piano Practice Plan</h1>
     <img src="../assets/pianologo.jpg" alt="Logo" class="right-image"> 
 </header>
 <nav>
     <a href="Page7.html">RESOURCES</a>
-    <a href="../index.html"> Home </a>
+    <a href="../index.html">Home</a>
 </nav>
 
 <section class="pianoPlan">
@@ -47,82 +89,82 @@
     </div>
 
     <div class="pppSection">
-        <p class="intro-text"> Hello, <span id="fullName"></span>! Welcome to your piano practice plan! Below is a list of things for you to follow
-        or use as a basis on your journey to become a better piano player.</p>
+        <p class="intro-text">Hello, <span id="fullName"></span>! Welcome to your piano practice plan! Below is a list of things for you to follow or use as a basis on your journey to become a better pianist.</p>
+        
         <ul>
-            <li><b>Skill Level:</b> Since you are a <span id="skillLevel"></span> Focus on curved finger posture, 5-finger patterns, and the "thumb-tuck" for one-octave scales to build a strong mechanical foundation. 
-            </br> Then, we suggest that you prioritize two-octave scales/arpeggios and "syncopated pedaling" to ensure your playing sounds clean and professional. When you;re finally used to everything, we encourage trying more advanced techniques such as incorporating scales in 3rds and 6ths, and focus on tone production using arm weight to master high-level artistry.
-            </li>
-            <li><b>Preferred Genre:</b> As a fan of <span id="genre"></span>,Work on "voicing" (making the melody sing over the accompaniment) and mastering polyphonic textures. </br> If you'd like, you could also focus on chord inversions, the I-V-vi-IV progression, and using rhythmic "grooves" in your left hand.
-            </br> You could also dedicate some time to the Blues scale, II-V-I progressions, and experimenting with "swung" vs. "straight" eighth notes, should you pursue jazz.
-            </li>
-            <li><div class="table-container">
-              
-            <li><b>Practice Time:</b> With a daily practice time of <span id=practiceTime"></span> hours, we suggest breaking it down into focused sessions to avoid fatigue and maximize "muscle memory" retention:
-    
-    <table>
-        <thead>
-            <tr>
-                <th>Session Segment</th>
-                <th>Duration</th>
-                <th>Focus Area</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="segment-name">Technical Warm-up</td>
-                <td class="duration">15% of time</td>
-                <td class="focus-area">Scales, arpeggios, and Hanon/Czerny exercises.</td>
-            </tr>
-            <tr>
-                <td class="segment-name">Sight-Reading</td>
-                <td class="duration">10% of time</td>
-                <td class="focus-area">Reading 2 levels below your current grade; no stopping!</td>
-            </tr>
-            <tr>
-                <td class="segment-name">Repertoire Work</td>
-                <td class="duration">50% of time</td>
-                <td class="focus-area">Deep practice in small 2-4 measure chunks.</td>
-            </tr>
-            <tr>
-                <td class="segment-name">Genre/Creative</td>
-                <td class="duration">25% of time</td>
-                <td class="focus-area">Improvising, ear training, or lead sheet playing.</td>
-            </tr>
-        </tbody>
-    </table>
-</div></li>
-        
-        
+            <li><b>Skill Level:</b> Since you are a <span id="skillLevel"></span>, you should <span id="explanLevel">...</span></li>
+            
+            <li><b>Preferred Genre:</b> As a fan of <span id="genre"></span>, you should <span id="explanGenre">...</span></li>
+            
+            <li><b>Practice Goal:</b> To help you with your goal regarding <span id="goal"></span>, we suggest you <span id="explanGoal">...</span></li>
+            
+            <li><b>Practice Time:</b> With a daily practice time of <span id="practiceTime"></span> hours, we suggest breaking it down into focused sessions to avoid fatigue and maximize "muscle memory" retention:</li>
         </ul>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Session Segment</th>
+                        <th>Duration</th>
+                        <th>Focus Area</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="segment-name">Technical Warm-up</td>
+                        <td class="duration">15% of time</td>
+                        <td class="focus-area">Scales, arpeggios, and Hanon/Czerny exercises.</td>
+                    </tr>
+                    <tr>
+                        <td class="segment-name">Sight-Reading</td>
+                        <td class="duration">10% of time</td>
+                        <td class="focus-area">Reading 2 levels below your current grade; no stopping!</td>
+                    </tr>
+                    <tr>
+                        <td class="segment-name">Repertoire Work</td>
+                        <td class="duration">50% of time</td>
+                        <td class="focus-area">Deep practice in small 2-4 measure chunks.</td>
+                    </tr>
+                    <tr>
+                        <td class="segment-name">Genre/Creative</td>
+                        <td class="duration">25% of time</td>
+                        <td class="focus-area">Improvising, ear training, or lead sheet playing.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </section>
 
-
 <footer> 
-        <div class="footer-col left">
-            <p><b>Contact Info:</b></p>
-            <p>b2029tmlara@pshs.edu.ph</p>
-            <p>b2029nalliboon@pshs.edu.ph</p>
-        </div>
-        
-        <div class="footer-col center-col" id="references">
-            <p><b>SOURCES</b></p>
-            <ul style="list-style: none; padding: 0; font-style: italic;">
-                <li><b> Contemporary School of Piano.com </b> (n.d.). Piano and keyboard chords in all keys charts.</li>
-                <li><b> Associated Board of the Royal Schools of Music (ABRSM)</b>. (2024). <i>Piano syllabus 2025 & 2026.<i> ABRSM. </li>
-                <li><b> Royal Conservatory of Music (RCM).</b> (2022). <i>Piano syllabus, 2022 edition.</i> The Frederick Harris Music Co., Limited. </li>
-                <li><b> Faber, N., & Faber, R.<b> (2011). <i> Piano adventures: A basic piano method.</i> Faber Piano Adventures. </li>
+    <div class="footer-col left">
+        <p><b>Contact Info:</b></p>
+        <p>b2029tmlara@pshs.edu.ph</p>
+        <p>b2029nalliboon@pshs.edu.ph</p>
+    </div>
+    
+    <div class="footer-col center-col" id="references">
+        <p><b>SOURCES</b></p>
+        <ul style="list-style: none; padding: 0;">
+            <li><b>Contemporary School of Piano.com</b> (n.d.). <i>Piano and keyboard chords in all keys charts.</i></li>
+            <li><b>Associated Board of the Royal Schools of Music (ABRSM)</b>. (2024). <i>Piano syllabus 2025 & 2026.</i> ABRSM.</li>
+            <li><b>Chang, C. C.</b> (2004). <i>Fundamentals of piano practice (2nd ed.).</i> CreateSpace.</li>
+            <li><b>Czerny, C.</b> (n.d.). <i>The school of velocity, Op. 299.</i> G. Schirmer, Inc.</li>
+            <li><b>Faber, N., & Faber, R.</b> (2011). <i>Piano adventures: A basic piano method.</i> Faber Piano Adventures.</li>
+            <li><b>Hanon, C. L.</b> (n.d.). <i>The virtuoso pianist in 60 exercises.</i> G. Schirmer, Inc.</li>
+            <li><b>Harris, P.</b> (2014). <i>Improve your sight-reading! Piano grade 1-8.</i> Faber Music.</li>
+            <li><b>Levine, M.</b> (1989). <i>The jazz piano book.</i> Sher Music Co.</li>
+            <li><b>Miller, D.</b> (2017). <i>The Nashville number system.</i> Nashville Number System.</li>
+            <li><b>Royal Conservatory of Music (RCM).</b> (2022). <i>Piano syllabus, 2022 edition.</i> The Frederick Harris Music Co.</li>
+        </ul>
+    </div>
 
-            </ul>
-        </div>
-
-        <div class="footer-col right">
-            <p><b>Share / Copyright</b></p>
-            <p>&copy; 2025 Travis Marco Lara & Nathan Allen Libo-on</p>
-            <p>PSHS-MC B2029. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <div class="footer-col right">
+        <p><b>Share / Copyright</b></p>
+        <p>&copy; 2025 Travis Marco Lara & Nathan Allen Libo-on</p>
+        <p>PSHS-MC B2029. All Rights Reserved.</p>
+    </div>
+</footer>
 </body>
-                    
 </html>
