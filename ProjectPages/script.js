@@ -149,3 +149,38 @@ function saveFormData(event) {
     window.location.href = "../index.html";
 
 }
+
+/** This is the JS logic for redirecting users based on piano skill level **/
+        
+function handleSkillRedirect() {
+    // 1. EXTRACT: Grab the specific value from the form
+    const inputElement = document.getElementById('skill-level');
+    const selectedLevel = inputElement.value;
+
+    console.log("Input Received:", selectedLevel); // Debugging line, documentation
+
+    // 2. LOGIC: Determine the destination based on the input
+    let destinationUrl = "";
+
+    if (selectedLevel === "beginner") {
+        // Logic for the Beginner path
+        destinationUrl = "./ProjectPages/Page6.html";
+        
+    } else if (selectedLevel === "intermediate") {
+        // Logic for the Intermediate path
+        destinationUrl = "./ProjectPages/Page8.html";
+        
+    } else if (selectedLevel === "advanced") {
+        // Logic for the Advanced path
+        destinationUrl = "./ProjectPages/Page9.html";
+        
+    } else {
+        // Logic for unexpected or empty input
+        alert("Please select a valid skill level to continue.");
+        return; 
+    }
+
+    // 3. ACTION: Execute the redirection
+    console.log("Redirecting to:", destinationUrl);
+    window.location.href = destinationUrl;
+}
