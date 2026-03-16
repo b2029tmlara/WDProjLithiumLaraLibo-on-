@@ -2,19 +2,22 @@
 
 ## 88 Keys 
 
-Project Repository for SY2526 CS 3 Project 
+Official Project Repository for SY2526 CS 3 Project 
 
-LARA, Travis Marco M.
+[Li17] LARA, Travis Marco M.
 
-LIBO-ON, Nathan Allen L.
+[Li18] LIBO-ON, Nathan Allen L.
 
 9 LITHIUM BATCH 2029
 
 PHILIPPINE SCIENCE HS - MC 
 
+Developer's note: Thank you for tuning along our 3-quarter long journey! Appended are our final README edits for the finalized version of our CS3 Final Project! 
+
+
 ![Homepage](./assets/pianologo.jpg "Mountain View")
 
-# Description
+# Description (2nd Quarter) 
 
 ## Our website aims to inform people about an instrument we have come to love, piano's! We will be dwelling on the history of the piano and the people who contributed in making this wonderful instrument. Furthermore, we will be showing the insides of the piano and how it actually works. For those interseted to learn how to play this instrument, we will be adding a cheat sheet of important piano chords. All in all, we want to educate people about the piano and hopefully interest some into learning this wonderful piece of music!
 
@@ -50,7 +53,7 @@ PHILIPPINE SCIENCE HS - MC
 # JavaScript Usage
 JavaScript will be used primarily to add the element of interactivity in the Interactive Piano part, with functions to be called and return specific values in order for notes to be properly played by the user upon the click of keys on their keyboard.
 
-# Wireframes
+# Wireframes (Q2)
 
 ## Home Page: 
 ![Homepage](./assets/homepage.jpg "Mountain View")
@@ -88,7 +91,7 @@ JavaScript will be used primarily to add the element of interactivity in the Int
 ![page2expnaded](./assets/page4expanded.jpg "Mountain View")
 
 
-# New Additions: HTML Forms in Piano Practice Planner
+# Previous Additions (CS3 3rd Quarter): The CR in CRUD (Create, Update, Delete) — HTML Forms in Piano Practice Planner (PPP)
 
 ## HTML Form Usage 
 HTML forms will be incorporated into the website such that they will extract the user's name, age, email, preferred musical genre, self-evaluated skill-level, how much time they spend in practicing the piano (in hours), how many days in a week they practice,  and aid in the selection of practice plans.
@@ -116,7 +119,7 @@ HTML forms will be incorporated into the website such that they will extract the
     C. Videos
     1. A set of youtube videos will appear based on the users skill level to help the user further progress.
    
-# Wireframe:
+# CR Wireframe (Q3):
 
 ## Page 5: 
 
@@ -129,3 +132,15 @@ HTML forms will be incorporated into the website such that they will extract the
 ## Page 7: 
 
 ![Page7](./assets/page7.jpg "Page7")
+
+
+# New Additions: The UD in CRUD
+## Now that half of CRUD (Create, Read, Update, and Delete) was implemented through the use of HTML forms in the data we used for PPP, it is now time to integrate UD (Update, Delete) into the website, allowing its viewers to Update or Reset their saved data
+
+## Update your PPP data 
+ insert text
+
+### Delete your PPP data 
+ insert text
+
+# UD Wireframe (Q4):
