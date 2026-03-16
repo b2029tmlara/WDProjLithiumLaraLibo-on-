@@ -17,7 +17,7 @@ Developer's note: Thank you for tuning along our 3-quarter long journey! Appende
 
 ![Homepage](./assets/pianologo.jpg "Mountain View")
 
-# Description (2nd Quarter) 
+# Description (CS3 2nd Quarter) 
 
 ## Our website aims to inform people about an instrument we have come to love, piano's! We will be dwelling on the history of the piano and the people who contributed in making this wonderful instrument. Furthermore, we will be showing the insides of the piano and how it actually works. For those interseted to learn how to play this instrument, we will be adding a cheat sheet of important piano chords. All in all, we want to educate people about the piano and hopefully interest some into learning this wonderful piece of music!
 
@@ -134,7 +134,7 @@ HTML forms will be incorporated into the website such that they will extract the
 ![Page7](./assets/page7.jpg "Page7")
 
 
-# New Additions: The UD in CRUD
+# New Additions (CS3 4th Quarter): The UD in CRUD
 ## Now that half of CRUD (Create, Read, Update, and Delete) was implemented through the use of HTML forms in the data we used for PPP, it is now time to integrate UD (Update, Delete) into the website, allowing its viewers to Update or Reset their saved data
 
 ## Update your PPP data 
