@@ -134,7 +134,7 @@ HTML forms will be incorporated into the website such that they will extract the
 ![Page7](./assets/page7.jpg "Page7")
 
 
-# New Additions (CS3 4th Quarter): The UD in CRUD
+# FINAL MODIFICATION PROPOSAL
 ## Now that half of CRUD (Create, Read, Update, and Delete) was implemented through the use of HTML forms in the data we used for PPP, it is now time to integrate UD (Update, Delete) into the website, allowing its viewers to Update or Reset their saved data
 
 ## Update your PPP data 
@@ -144,3 +144,19 @@ HTML forms will be incorporated into the website such that they will extract the
  Should the user no longer want to immerse themselves in 88 Keys, a delete button for their data will be added at the bottom of the page. Once pressed, they will be presented with a conforme window confirming that they truly want to delete their data from the website. (e.g. *press* "Are you sure you want to permanently delete your data from 88 Keys? You will need to sign up again if you want to rejoin [YES, I am sure / NO, I am willing to practice more]") 
 
 # UD Wireframe (Q4):
+
+## Homepage - Update and Delete Buttons 
+
+![Page5](./assets/update-delete.jpg "Update-Delete")
+
+## Form With Previously Chosen Data
+
+![Page7](./assets/saved-form.jpg "Saved-Form")
+
+## Form With Previously Chosen Data - Update Alert
+
+![Page6](./assets/saved-form-alert.jpg "Saved-Form-Alert")
+
+## Homepage - Update and Delete Buttons - Delete Alert
+
+![Page7](./assets/update-delete-alert.jpg "Update-Delete-Alert")
