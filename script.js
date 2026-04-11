@@ -7,42 +7,62 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const signUpSection = document.querySelector('a.visitButton').parentElement;
 
-// Avoid adding multiple containers
-if (!document.querySelector('.dynamic-container')) {
+    // Avoid adding multiple containers
+    if (!document.querySelector('.dynamic-container')) {
 
-    const dynamicContainer = document.createElement('div');
-    dynamicContainer.classList.add('dynamic-container'); // NEW class, not index-container
+        // 1. REMOVE THE ORIGINAL "SIGN UP" TEXT AND BUTTON
+        const originalExplain = signUpSection.querySelector('.explainSection');
+        const originalSignUpButton = signUpSection.querySelector('a.visitButton');
+        
+        if (originalExplain) originalExplain.remove();
+        if (originalSignUpButton) originalSignUpButton.remove();
 
-    dynamicContainer.innerHTML = `
-        <div class="explainSection">
-            <p style="font-size: 20px;">
-                Congratulations, ${data.fullName}! Your Piano Practice Plan pages are ready. 
-                Click the links below to view your personalized practice plan and supplementary resources.
-            </p>
-        </div>
+        // 2. CREATE THE NEW CONTAINER
+        const dynamicContainer = document.createElement('div');
+        dynamicContainer.classList.add('dynamic-container'); // NEW class, not index-container
 
-        <div class="containerPPP">
-            <div class="sixthPage">
-                <div class="ppp-box">
-                    <p class="ppppage-description"> PRACTICE PLAN </p>
-                    <p>
-                        <button class="ppppageButton"><a href="./ProjectPages/Page6.html"> VISIT </a></button>
-                    </p>
+        // 3. ADD YOUR NEW CONTENT AND THE UPDATE/DELETE BUTTONS
+        dynamicContainer.innerHTML = `
+            <div class="explainSection">
+                <p style="font-size: 20px;">
+                    Congratulations, ${data.fullName}! Your Piano Practice Plan pages are ready. 
+                    Click the links below to view your personalized practice plan and supplementary resources.
+                </p>
+            </div>
+
+            <div class="containerPPP">
+                <div class="sixthPage">
+                    <div class="ppp-box">
+                        <p class="ppppage-description"> PRACTICE PLAN </p>
+                        <p>
+                            <button class="ppppageButton"><a href="./ProjectPages/Page6.html"> VISIT </a></button>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="seventhPage">
+                    <div class="ppp-box">
+                        <p class="ppppage-description"> RESOURCES </p>
+                        <p>
+                            <a class="ppppageButton" href="./ProjectPages/Page7.html"> VISIT </a>
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="seventhPage">
-                <div class="ppp-box">
-                    <p class="ppppage-description"> RESOURCES </p>
-                    <p>
-                        <a class="ppppageButton" href="./ProjectPages/Page7.html"> VISIT </a>
-                    </p>
-                </div>
+            <div style="text-align: center; margin-top: 30px; display: flex; justify-content: center; gap: 20px;">
+                <a href="./ProjectPages/Page5.html" class="visitButton">UPDATE PPP</a>
+                <button id="deletePppBtn" class="visitButton" style="cursor: pointer; font-family: inherit;">DELETE PPP</button>
             </div>
-        </div>
-    </div>
-    `;
+        `;
 
-    signUpSection.appendChild(dynamicContainer);
-}
+        signUpSection.appendChild(dynamicContainer);
+
+        // 4. ADD FUNCTIONALITY TO THE DELETE BUTTON
+        document.getElementById('deletePppBtn').addEventListener('click', () => {
+            // Remove the data and reload the page so the sign-up section comes back
+            localStorage.removeItem("pianoUserData");
+            window.location.reload(); 
+        });
+    }
 });
