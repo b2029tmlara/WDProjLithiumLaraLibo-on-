@@ -51,18 +51,28 @@ window.addEventListener('DOMContentLoaded', () => {
             </div>
 
             <div style="text-align: center; margin-top: 30px; display: flex; justify-content: center; gap: 20px;">
-                <a href="./ProjectPages/Page5.html" class="visitButton">UPDATE PPP</a>
-                <button id="deletePppBtn" class="visitButton" style="cursor: pointer; font-family: inherit;">DELETE PPP</button>
+                <a href="./ProjectPages/Page5.html" id="updatePppBtn" class="visitButton" >UPDATE PPP</a>
+                <button id="deletePppBtn" class="visitButton" style="cursor: pointer; ">DELETE PPP</button>
             </div>
         `;
 
         signUpSection.appendChild(dynamicContainer);
 
-        // 4. ADD FUNCTIONALITY TO THE DELETE BUTTON
+        // 4. ADD FUNCTIONALITY TO THE DELETE AND UPDATE BUTTON
         document.getElementById('deletePppBtn').addEventListener('click', () => {
             // Remove the data and reload the page so the sign-up section comes back
             localStorage.removeItem("pianoUserData");
             window.location.reload(); 
+            confirmAction()
         });
+        document.getElementById('updatePppBtn').addEventListener('click', () => {
+            confirmAction()
+        });
+        function confirmAction(type) {
+            const message = type === 'submit' 
+                ? "Are you sure you want to update your application?" 
+                : "Are you sure you want to clear all entered information?";
+            return confirm(message);
+        }
     }
 });
