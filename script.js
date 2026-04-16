@@ -61,18 +61,11 @@ window.addEventListener('DOMContentLoaded', () => {
         // 4. ADD FUNCTIONALITY TO THE DELETE AND UPDATE BUTTON
         document.getElementById('deletePppBtn').addEventListener('click', () => {
             // Remove the data and reload the page so the sign-up section comes back
-            localStorage.removeItem("pianoUserData");
-            window.location.reload(); 
-            confirmAction()
+            let userResponse = confirm("Do you want to delete PPP data?");
+            if (userResponse) {
+                localStorage.removeItem("pianoUserData");
+                window.location.reload(); 
+            }
         });
-        document.getElementById('updatePppBtn').addEventListener('click', () => {
-            confirmAction()
-        });
-        function confirmAction(type) {
-            const message = type === 'submit' 
-                ? "Are you sure you want to update your application?" 
-                : "Are you sure you want to clear all entered information?";
-            return confirm(message);
-        }
     }
 });
