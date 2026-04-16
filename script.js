@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
             </div>
 
             <div style="text-align: center; margin-top: 30px; display: flex; justify-content: center; gap: 20px;">
-                <a href="./ProjectPages/Page5.html" id="updatePppBtn" class="visitButton" >UPDATE PPP</a>
+                <button id="updatePppBtn" class="visitButton" style="cursor: pointer; ">UPDATE PPP</button>
                 <button id="deletePppBtn" class="visitButton" style="cursor: pointer; ">DELETE PPP</button>
             </div>
         `;
@@ -65,6 +65,13 @@ window.addEventListener('DOMContentLoaded', () => {
             if (userResponse) {
                 localStorage.removeItem("pianoUserData");
                 window.location.reload(); 
+            }
+        });
+        document.getElementById('updatePppBtn').addEventListener('click', () => {
+            // Remove the data and reload the page so the sign-up section comes back
+            let userResponse = confirm("Do you want to update PPP data?");
+            if (userResponse) {
+                window.location.replace("ProjectPages/Page5.html")
             }
         });
     }
