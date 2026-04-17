@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded', () => {
             // Remove the data and reload the page so the sign-up section comes back
             let userResponse = confirm("Do you want to update PPP data?");
             if (userResponse) {
-                window.location.replace("ProjectPages/Page5.html")
+                window.location.replace("ProjectPages/Page10.html")
             }
         });
     }

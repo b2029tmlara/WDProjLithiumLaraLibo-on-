@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ProjectPages">
+    <meta name="author" content="Nathan Allen Libo-on, Travis Marco Lara">
+    <title>88 Keys</title>
+    <link rel="icon" href="../assets/pianologo.jpg" sizes="20x20" type="image/jng">
+    <link rel="stylesheet" href="pagestyles.css">
+    <script src="script.js" defer></script>
+    
+    <meta charset="UTF-8">
+    <title> Personal Head </title>
+
+</head>
+    
+<body>
+
+    <form onsubmit="saveFormData(event)" onreset="return confirmAction('reset')">
+        
+        <fieldset>
+            <legend>Personal Identification</legend>
+            <label>Full Name:
+                <input type="text" name="fullName" id="full-Name" required onblur="checkEmpty(this)" placeholder="formData.fullName">
+            </label>
+            <label>Birthday:
+                <input type="date" name="birthday" id="bDay" required>
+            </label>
+            <label>Email Address:
+                <input type="email" name="email" id="eMail" required onblur="checkEmpty(this)">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend> Piano Capabilities</legend>
+
+    <!-- ID skill level is used in the JS program for redirection, we focus on this -->
+        
+            <label> Skill Level:
+                <select name="skillLevel" id="skill-Level" required>
+                    <option value="">--Select Level--</option>
+                    <option value="BEGINNER">Beginner</option>
+                    <option value="INTERMEDIATE">Intermediate</option>
+                    <option value="ADVANCED">Advanced</option>
+                </select>
+            </label>
+
+            <label> Preffered Genre:
+                 <select name="genre" id="musicGenre" required>
+                    <option value="">--Select a Genre--</option>
+                    <option value="CLASSICAL">Classical</option>
+                    <option value="JAZZ">Jazz</option>
+                    <option value="POP">Pop</option>
+                    <option value="ROCK">Rock</option>
+                    <option value="COUNTRY">Country</option>
+                </select>
+            </label>
+
+                <label for="practice-time">Practice Time: </label>
+                <div class="slider-container">
+                    <input type="range" name="practiceTime" id="practice-time" min="0.5" max="8" step="0.5" value="4" required>
+                        <div class="slider-labels">
+                            <span>0.5</span>
+                            <span>1</span>
+                            <span>1.5</span>
+                            <span>2</span>
+                            <span>2.5</span>
+                            <span>3</span>
+                            <span>3.5</span>
+                            <span>4</span>
+                            <span>4.5</span>
+                            <span>5</span>
+                            <span>5.5</span>
+                            <span>6</span>
+                            <span>6.5</span>
+                            <span>7</span>
+                            <span>7.5</span>
+                            <span>8</span>
+                            </div>
+                </div>
+
+            <label> Available Practice Days:
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="sunday" id="Sunday"> Sunday</label>
+                    <label><input type="checkbox" name="monday" id="Monday"> Monday</label>
+                    <label><input type="checkbox" name="tuesday" id="Tuesday"> Tuesday</label>
+                    <label><input type="checkbox" name="wednesday" id="Wednesday"> Wednesday</label>
+                    <label><input type="checkbox" name="thursday" id="Thursday"> Thursday</label>
+                    <label><input type="checkbox" name="friday" id="Friday"> Friday</label>
+                    <label><input type="checkbox" name="saturday" id="Saturday"> Saturday</label>
+                </div>
+            </label>
+
+            <label>Goal:
+                <select name="goal" id="musicGoal" required>
+                    <option value="">--Select a Goal--</option>
+                    <option value="fingers">Better Finger Techniques</option>
+                    <option value="learning">Faster Learning</option>
+                    <option value="sight">Improve Sight Reading</option>
+                    <option value="music-theory">Learn Music Theory</option>
+                    <option value="timing">Improve Timing and Rhythm</option>
+                    <option value="note-recog">Improve Note Recognition</option>
+                </select>
+            </label>
+        </fieldset>
+
+        <div class="button-group">
+            <input type="submit" onkeyup="handleSkillRedirect()" value="Submit Information">
+            <input type="reset" value="Reset Form">
+            <a href="../index.html" class="home-btn">Home</a>
+        </div>
+    </form>
+
+</body>
+</html>

@@ -194,3 +194,30 @@ function handleSkillRedirect() {
     console.log("Redirecting to:", destinationUrl);
     window.location.href = destinationUrl;
 }
+/**OPENING FORM WITH PREVIOUSLY ENTERED DATA */
+window.addEventListener("DOMContentLoaded", () => {
+    const fullNameInput = document.getElementById("full-Name");
+
+    const formData = JSON.parse(localStorage.getItem("pianoUserData"));
+    if (formData) {
+        document.getElementById("full-Name").value = formData.fullName;
+        document.getElementById("bDay").value = formData.birthday;
+        document.getElementById("eMail").value = formData.email;
+
+    
+        document.getElementById("skill-Level").value = formData.skillLevel;
+        document.getElementById("musicGenre").value = formData.genre;
+        document.getElementById("musicGoal").value = formData.goal;
+
+
+        document.getElementById("practice-time").value = formData.practiceTime;
+
+    // FOR CHECKBOXES
+        formData.practiceDays.forEach(day => {
+            const checkbox = document.getElementById(day);
+            if (checkbox) {
+                checkbox.checked = true;
+            }
+        });
+    }
+});
